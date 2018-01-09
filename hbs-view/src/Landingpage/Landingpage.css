@@ -1,10 +1,3 @@
 .Wrapper {
   border: 5px solid red;
 }
-
-.header {
-  border: 2px solid blue;
-  text-align: center;
-  background: #2c3e50;
-  color: white;
-}

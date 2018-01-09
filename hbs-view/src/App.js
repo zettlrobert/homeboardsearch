@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import * as firebase from 'firebase';
 import './App.css';
+import GoogleSignIn from './Authentification/GoogleSignIn';
+import Header from './Content/Header';
+import Content from './Content/Content';
 import LandingPage from './Landingpage/Landingpage';
 import MySideNav from './Sidenav/Sidenav';
 
@@ -63,8 +66,8 @@ class App extends Component {
       pageContent = (
         <div>
           <h2>You are logged in in Homeboard Search</h2>
+          <Content />
           <MySideNav/>
-
 
         </div>
       );
@@ -72,9 +75,8 @@ class App extends Component {
       // User is not Loged in (Authenticated)
     pageContent = (
       <div>
+        <Header />
         <LandingPage/>
-        <h2>Pleas Sign In!</h2>
-        <h2>This is my Test</h2>
 
       </div>
     );

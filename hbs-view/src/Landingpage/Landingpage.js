@@ -1,12 +1,13 @@
 import React from 'react';
+import * as firebase from 'firebase';
+import GoogleSignIn from './../Authentification/GoogleSignIn'
 import classes from './Landingpage.css';
 
 const LandingPage = () => {
   return (
     <div className={classes.Wrapper}>
-      <header className={classes.header}>
-        <h1>Homeboard Search</h1>
-      </header>
+    <p>This comes from Landingpage</p>
+      <h2>Pleas Sign In!<GoogleSignIn firebase={ firebase }/></h2>
     </div>
   );
 }
