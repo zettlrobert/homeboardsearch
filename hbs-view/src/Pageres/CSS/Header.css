@@ -1,5 +1,6 @@
 .header {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
+  padding: 2em;
   text-align: center;
   background: #2c3e50;
   color: white;

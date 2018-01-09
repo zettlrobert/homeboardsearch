@@ -1,0 +1,22 @@
+.loginBtnGoogle {
+  width: auto;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0.2em;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 1em;
+}
+.loginBtnGoogle:hover {
+  border: 2px solid black;
+}
+.signIconStyle {
+  border: 1px solid red;
+  margin: 0.2em;
+  vertical-align: middle;
+  padding: 0.2em;
+  text-align: left;
+}

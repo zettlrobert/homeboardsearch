@@ -22,7 +22,7 @@ npm install --save firebase
 for Authentification and firebase Functions
 var app = firebaes.initializeApp();
 
-unlock CSS Modules for react
+unlock CSS Modules for react https://github.com/css-modules/css-modules
   npm run eject on hbs-view
   scroll du modules
   find test: /\.css$/,
