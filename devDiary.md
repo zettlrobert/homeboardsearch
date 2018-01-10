@@ -44,3 +44,5 @@ https://firebase.google.com/docs/auth/?authuser=0
       modules: true,
 
       localIdentName: '[name]__[local]__[hash:base64:5]'
+      
+  8. Worked on Login and content

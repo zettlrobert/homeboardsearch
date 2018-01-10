@@ -22,19 +22,27 @@ const MySideNav = () => {
     })
   }
 
-  // const clickTest = () => {
-  //   var testClick = true;
-  //   console.log('clicked');
-  //   if(testClick) {
-  //     console.log('does it fire?');
-  //   }
-  // }
+  const onNavChange = (id) => {
+    console.log('clicked', id);
+    if(id === "dashboard") {
+      console.log('Load Dashboard');
+    } else {
+      if(id === "settings") {
+        console.log('Load Settings');
+      } else {
+        if(id=== "sign_out") {
+          signOut();
+        }
+      }
+    }
+  }
+
 
     return (
-      <div>
+      <div style={{ display: 'flex', flexWrap: 'wrap'}}>
 
-        <div style={{background: '#2c3e50', color: '#FFF', alignSelf: 'stretch', textAlign: 'center'}}>
-          <SideNav highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='dashboard'>
+        <div style={{width: '33%',height: '80vh', margin: '0', background: '#2c3e50', color: '#FFF', alignSelf: 'stretch', textAlign: 'left'}}>
+          <SideNav onItemSelection={onNavChange} highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='dashboard'>
 
           <Nav id='dashboard'>
           <NavIcon><SvgIcon size={20} icon={ic_aspect_ratio}/></NavIcon>
@@ -51,13 +59,41 @@ const MySideNav = () => {
           <NavText>Share</NavText>
           </Nav>
 
+          <Nav id='sign_out'>
+          <NavIcon>
+          <SvgIcon size={20} icon={logout} />
+          </NavIcon>
+          <NavText>Sign Out</NavText>
+          </Nav>
+
           </SideNav>
         </div>
 
-        <div style={{background: '#2c3e50', color: 'white', marginTop: '15px'}}>
-          <a href="#" onClick={signOut}>
-          <SvgIcon icon={logout} size={50} style={{color: 'white', padding: '20px', border: '1px solid red'}} /></a>
+        <div style = {{ border: '2px solid red', padding: '30px', height:'100%' }}>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
         </div>
+        <div style = {{ border: '2px solid red', padding: '30px', height:'100%' }}>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+        </div>
+        <div style = {{ border: '2px solid red', padding: '30px', height:'100%' }}>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+          <p>just some wise and filling content</p>
+        </div>
+
 
       </div>
     );
