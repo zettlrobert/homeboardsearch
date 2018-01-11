@@ -1,6 +1,7 @@
 import React from 'react';
 import * as firebase from 'firebase';
-import GoogleSignIn from './../Authentification/GoogleSignIn'
+import GoogleSignIn from './../Authentification/GoogleSignIn';
+import FacebookSignIn from './../Authentification/FacebookSignIn';
 import classes from './Landingpage.css';
 
 
@@ -9,7 +10,6 @@ import classes from './Landingpage.css';
 //Icons for Buttons //
 //////////////////////
 import Icon from 'react-icons-kit';
-import { facebookOfficial } from 'react-icons-kit/fa/facebookOfficial';
 import { twitter } from 'react-icons-kit/fa/twitter';
 import { github } from 'react-icons-kit/fa/github';
 
@@ -27,9 +27,15 @@ const LandingPage = () => {
 
             <GoogleSignIn firebase={ firebase }/>
 
+<<<<<<< develop
             <button className={classes.loginBtnFacebook}>
             <Icon className={classes.signIconStyle}icon={ facebookOfficial } size={32}/>
             Sign in with Facebook</button>
+=======
+          <FacebookSignIn firebase={ firebase }/>
+
+
+>>>>>>> Facebook login finished fucking git
 
             <button className={classes.loginBtnTwitter}>
             <Icon className={classes.signIconStyle}icon={ twitter } size={32}/>
