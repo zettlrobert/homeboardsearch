@@ -1,14 +1,10 @@
 .Wrapper {
   border: 5px dotted red;
-  display: flex;
-  flex-wrap: wrap;
-  }
+  height: 100%;
+}
 
 .SignInOptionsContainer {
   border: 5px solid blue;
-  justify-content: center;
-  align-items: center;
-  padding: 1em;
 }
 
 .SignInOptios {
@@ -16,20 +12,7 @@
 }
 
 /*Sign In Button Styles*/
-.loginBtnFacebook {
-  width: auto;
-  box-sizing: border-box;
-  position: relative;
-  margin: 0.2em;
-  border: none;
-  text-align: left;
-  line-height: 34px;
-  white-space: nowrap;
-  border-radius: 0.2em;
-  font-size: 1em;
-  font-weight: bold;
-  color: #354C8C;
-}
+
 .loginBtnTwitter {
   width: auto;
   box-sizing: border-box;
@@ -41,7 +24,6 @@
   white-space: nowrap;
   border-radius: 0.2em;
   font-size: 1em;
-  font-weight: bold;
   color: #00aced;
 }
 .loginBtnGithub {
@@ -55,13 +37,9 @@
   white-space: nowrap;
   border-radius: 0.2em;
   font-size: 1em;
-    font-weight: bold;
   color: #24292e;
 }
 /*Btn Hover*/
-.loginBtnFacebook:hover {
-  border: 2px solid #354C8C;
-}
 .loginBtnTwitter:hover {
   border: 2px solid #00aced;
 }
@@ -70,7 +48,7 @@
 }
 
 .signIconStyle {
-  /* border: 1px solid black; */
+  border: 1px solid red;
   margin: 0.2em;
   vertical-align: middle;
   padding: 0.2em;
@@ -79,7 +57,6 @@
 
 /*Content Style*/
 .contentBox1 {
-  width: 100%;
   border: 2px solid orange;
   display: flex;
   justify-content: center;
@@ -87,7 +64,7 @@
 
 }
 
-.Content {
+.ulListStyle {
   border: 2px solid black;
   margin: 1em;
   padding: 1em;
