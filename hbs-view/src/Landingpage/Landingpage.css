@@ -6,15 +6,13 @@
 
 .SignInOptionsContainer {
   border: 5px solid blue;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 1em;
 }
 
 .SignInOptios {
   border: 2px solid red;
-
 }
 
 /*Sign In Button Styles*/
