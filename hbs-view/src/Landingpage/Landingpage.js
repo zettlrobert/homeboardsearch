@@ -27,15 +27,9 @@ const LandingPage = () => {
 
             <GoogleSignIn firebase={ firebase }/>
 
-<<<<<<< develop
-            <button className={classes.loginBtnFacebook}>
-            <Icon className={classes.signIconStyle}icon={ facebookOfficial } size={32}/>
-            Sign in with Facebook</button>
-=======
-          <FacebookSignIn firebase={ firebase }/>
+            <FacebookSignIn firebase={ firebase }/>
 
 
->>>>>>> Facebook login finished fucking git
 
             <button className={classes.loginBtnTwitter}>
             <Icon className={classes.signIconStyle}icon={ twitter } size={32}/>
