@@ -1,0 +1,42 @@
+/* Icon Style */
+.signIconStyle {
+  /* border: 1px solid black; */
+  margin: 0.2em;
+  vertical-align: middle;
+  padding: 0.2em;
+  text-align: left;
+}
+
+/* Google */
+.loginBtnGoogle {
+  width: auto;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0.2em;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 1em;
+}
+.loginBtnGoogle:hover {
+  border: 2px solid black;
+}
+/* Facebook */
+.loginBtnFacebook {
+  width: auto;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0.2em;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 1em;
+  color: #354C8C;
+}
+.loginBtnFacebook:hover {
+  border: 2px solid #354C8C;
+}
