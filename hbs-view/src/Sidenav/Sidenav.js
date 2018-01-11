@@ -30,7 +30,7 @@ const MySideNav = () => {
       if(id === "settings") {
         console.log('Load Settings');
       } else {
-        if(id=== "sign_out") {
+        if(id === "sign_out") {
           signOut();
         }
       }
