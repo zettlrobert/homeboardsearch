@@ -78,7 +78,7 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
+      <div className="App" style={{height: '100vh', background: 'lightgrey'}}>
       {pageContent}
       </div>
     );

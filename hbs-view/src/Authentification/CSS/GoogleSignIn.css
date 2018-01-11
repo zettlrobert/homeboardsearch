@@ -9,12 +9,13 @@
   white-space: nowrap;
   border-radius: 0.2em;
   font-size: 1em;
+  font-weight: bold;
 }
 .loginBtnGoogle:hover {
   border: 2px solid black;
 }
 .signIconStyle {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 0.2em;
   vertical-align: middle;
   padding: 0.2em;

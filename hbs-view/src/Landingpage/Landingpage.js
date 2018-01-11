@@ -16,27 +16,36 @@ import { github } from 'react-icons-kit/fa/github';
 const LandingPage = () => {
   return (
     <div className={classes.Wrapper}>
-    <p>This comes from Landingpage</p>
 
-      <div className={classes.SignInOptions}>
-        <h2>Please Sign In!</h2>
 
-          <GoogleSignIn firebase={ firebase }/>
+      <div className={classes.SignInOptionsContainer}>
+        <div>
+          <h2>Please Sign In!</h2>
+        </div>
 
-          <button className={classes.loginBtnFacebook}>
-          <Icon className={classes.signIconStyle}icon={ facebookOfficial } size={32}/>
-          Sign in with Facebook</button>
+          <div className={classes.SignInOptios}>
 
-          <button className={classes.loginBtnTwitter}>
-          <Icon className={classes.signIconStyle}icon={ twitter } size={32}/>
-          Sign in with Twitter</button>
+            <GoogleSignIn firebase={ firebase }/>
 
-          <button className={classes.loginBtnGithub}>
-          <Icon className={classes.signIconStyle}icon={ github } size={32}/>
-          Sign in with GitHub</button>
+            <button className={classes.loginBtnFacebook}>
+            <Icon className={classes.signIconStyle}icon={ facebookOfficial } size={32}/>
+            Sign in with Facebook</button>
+
+            <button className={classes.loginBtnTwitter}>
+            <Icon className={classes.signIconStyle}icon={ twitter } size={32}/>
+            Sign in with Twitter</button>
+
+            <button className={classes.loginBtnGithub}>
+            <Icon className={classes.signIconStyle}icon={ github } size={32}/>
+            Sign in with GitHub</button>
+
+          </div>
       </div>
+
       <div className={classes.contentBox1}>
-        <div className={classes.ulListStyle}>
+
+
+        <div className={classes.Content}>
           <ul>
           <h3>Homeboard Search Features</h3>
           <li>Search with Google</li>
@@ -46,7 +55,7 @@ const LandingPage = () => {
           </ul>
         </div>
 
-        <div className={classes.ulListStyle}>
+        <div className={classes.Content}>
           <ul>
           <h3>Planned Widgets</h3>
           <li>News Feed</li>
@@ -56,7 +65,7 @@ const LandingPage = () => {
           </ul>
         </div>
 
-        <div className={classes.ulListStyle}>
+        <div className={classes.Content}>
           <ul>
           <h3>Homeboard Search Features</h3>
           <li>Search with Google</li>
@@ -66,8 +75,8 @@ const LandingPage = () => {
           </ul>
         </div>
 
-      </div>
 
+      </div>
     </div>
   );
 }

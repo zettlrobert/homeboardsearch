@@ -1,7 +1,11 @@
 .header {
   /* border: 2px solid blue; */
-  padding: 2em;
+  padding: 3em;
   text-align: center;
-  background: #2c3e50;
+  /* background: #2c3e50; */
+  background-image: url('./../hbs-header-pictures/mountains.svg');
+  background-size: cover;
+  background-position: bottom;
   color: white;
+  font-weight: bold;
 }

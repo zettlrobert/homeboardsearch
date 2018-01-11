@@ -2,6 +2,7 @@ import React from 'react';
 import SideNav, { Nav, NavIcon, NavText } from 'react-sidenav';
 import SvgIcon from 'react-icons-kit';
 import * as firebase from 'firebase';
+import classes from './CSS/Sidenav.css';
 
 //Icons for Navigation Material Design 'react-icons-kit'
 import { ic_aspect_ratio } from 'react-icons-kit/md/ic_aspect_ratio';
@@ -39,59 +40,38 @@ const MySideNav = () => {
 
 
     return (
-      <div style={{ display: 'flex', flexWrap: 'wrap'}}>
+      <div className={classes.NavWrapper}>
 
-        <div style={{width: '33%',height: '80vh', margin: '0', background: '#2c3e50', color: '#FFF', alignSelf: 'stretch', textAlign: 'left'}}>
-          <SideNav onItemSelection={onNavChange} highlightColor='#E91E63' highlightBgColor='#00bcd4' defaultSelected='dashboard'>
+        <div className={classes.SideNav}>
+          <SideNav onItemSelection={onNavChange}
+          highlightColor='#E91E63'
+          highlightBgColor='#00bcd4'
+          defaultSelected='dashboard'>
+
 
           <Nav id='dashboard'>
           <NavIcon><SvgIcon size={20} icon={ic_aspect_ratio}/></NavIcon>
-          <NavText>Homeboard</NavText>
+          <NavText className={classes.NavItemPadding}>Homeboard</NavText>
           </Nav>
 
           <Nav id='settings'>
           <NavIcon><SvgIcon size={20} icon={ic_more_horiz}/></NavIcon>
-          <NavText>Settings</NavText>
+          <NavText className={classes.NavItemPadding}>Settings</NavText>
           </Nav>
 
           <Nav id='share'>
           <NavIcon><SvgIcon size={20} icon={ic_share}/></NavIcon>
-          <NavText>Share</NavText>
+          <NavText className={classes.NavItemPadding}>Share</NavText>
           </Nav>
 
           <Nav id='sign_out'>
           <NavIcon>
           <SvgIcon size={20} icon={logout} />
           </NavIcon>
-          <NavText>Sign Out</NavText>
+          <NavText className={classes.NavItemPadding}>Sign Out</NavText>
           </Nav>
 
           </SideNav>
-        </div>
-
-        <div style = {{ border: '2px solid red', padding: '30px', height:'100%' }}>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-        </div>
-        <div style = {{ border: '2px solid red', padding: '30px', height:'100%' }}>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-        </div>
-        <div style = {{ border: '2px solid red', padding: '30px', height:'100%' }}>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
-          <p>just some wise and filling content</p>
         </div>
 
 

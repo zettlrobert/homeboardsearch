@@ -44,5 +44,11 @@ https://firebase.google.com/docs/auth/?authuser=0
       modules: true,
 
       localIdentName: '[name]__[local]__[hash:base64:5]'
-      
+
   8. Worked on Login and content
+
+11.01.2017
+Worked on styling of components
+  LandingPage
+  Content
+  Header
