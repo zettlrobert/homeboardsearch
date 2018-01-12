@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import classes from './CSS/GoogleSignIn.css';
+import classes from './CSS/SignIn.css';
 
 ////////////////
 //Icon import //

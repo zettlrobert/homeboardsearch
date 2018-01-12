@@ -56,4 +56,9 @@ Worked on styling of components
 12.01.2018
 TwitterSignIn
 Register App on Twitter Dev https://apps.twitter.com/app/
+!!!Set Permissions to get email Identifier
 Coded Twitter Login https://firebase.google.com/docs/auth/web/twitter-login
+
+GitHubSignIn
+https://firebase.google.com/docs/auth/web/github-auth
+Register app as dev on GitHub https://github.com/settings/applications/new

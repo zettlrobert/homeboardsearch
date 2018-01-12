@@ -3,6 +3,7 @@ import * as firebase from 'firebase';
 import GoogleSignIn from './../Authentification/GoogleSignIn';
 import FacebookSignIn from './../Authentification/FacebookSignIn';
 import TwitterSignIn from './../Authentification/TwitterSignIn';
+import GitHubSignIn from './../Authentification/GitHubSignIn';
 import classes from './Landingpage.css';
 
 
@@ -32,10 +33,7 @@ const LandingPage = () => {
 
             <TwitterSignIn firebase={ firebase }/>
 
-
-            <button className={classes.loginBtnGithub}>
-            <Icon className={classes.signIconStyle}icon={ github } size={32}/>
-            Sign in with GitHub</button>
+            <GitHubSignIn firebase={ firebase }/>
 
           </div>
       </div>
