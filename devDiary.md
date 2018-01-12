@@ -47,8 +47,13 @@ https://firebase.google.com/docs/auth/?authuser=0
 
   8. Worked on Login and content
 
-11.01.2017
+11.01.2018
 Worked on styling of components
   LandingPage
   Content
   Header
+
+12.01.2018
+TwitterSignIn
+Register App on Twitter Dev https://apps.twitter.com/app/
+Coded Twitter Login https://firebase.google.com/docs/auth/web/twitter-login

@@ -40,3 +40,19 @@
 .loginBtnFacebook:hover {
   border: 2px solid #354C8C;
 }
+.loginBtnTwitter {
+  width: auto;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0.2em;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 1em;
+  color: #00aced;
+}
+.loginBtnTwitter:hover {
+    border: 2px solid #00aced;
+}
