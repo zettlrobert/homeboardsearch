@@ -77,6 +77,6 @@ changed colors
 Adjusted Searchparameters with Survey
 
 18.01.2018 Coding with Khadim
-install superagent --s
-install cors
-install body-parser
+install axios --s       in hbs-view
+install cors            in rootserver
+install body-parser     in rootserver
