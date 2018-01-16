@@ -3,6 +3,7 @@ import SideNav, { Nav, NavIcon, NavText } from 'react-sidenav';
 import SvgIcon from 'react-icons-kit';
 import * as firebase from 'firebase';
 import classes from './CSS/Sidenav.css';
+import UserInfo from './../Pageres/UserInfo';
 
 //Icons for Navigation Material Design 'react-icons-kit'
 import { ic_aspect_ratio } from 'react-icons-kit/md/ic_aspect_ratio';
@@ -17,12 +18,14 @@ const MySideNav = () => {
   //Functions //
   //////////////
 
+  //Sign Out
   const signOut = () => {
     firebase.auth().signOut().then(function(){
       console.log('Signed Out Succesfully');
     })
   }
 
+  //Select nav Item
   const onNavChange = (id) => {
     console.log('clicked', id);
     if(id === "dashboard") {
@@ -41,13 +44,13 @@ const MySideNav = () => {
 
     return (
       <div className={classes.NavWrapper}>
-
         <div className={classes.SideNav}>
           <SideNav onItemSelection={onNavChange}
           highlightColor='#E91E63'
           highlightBgColor='#00bcd4'
           defaultSelected='dashboard'>
 
+          <UserInfo />
 
           <Nav id='dashboard'>
           <NavIcon><SvgIcon size={20} icon={ic_aspect_ratio}/></NavIcon>

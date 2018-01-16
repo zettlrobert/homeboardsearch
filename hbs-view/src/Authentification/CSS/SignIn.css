@@ -1,7 +1,8 @@
 /* Icon Style */
 .signIconStyle {
   /* border: 1px solid black; */
-  margin: 0.2em;
+  margin: 0.3em;
+  margin-right: 1em;
   vertical-align: middle;
   padding: 0.2em;
   text-align: left;
@@ -9,7 +10,7 @@
 
 /* Google */
 .loginBtnGoogle {
-  width: auto;
+  min-width: 15vw;
   box-sizing: border-box;
   position: relative;
   margin: 0.2em;
@@ -19,13 +20,14 @@
   white-space: nowrap;
   border-radius: 0.2em;
   font-size: 1em;
+  font-weight: bold;
 }
 .loginBtnGoogle:hover {
   border: 0.4em solid black;
 }
 /* Facebook */
 .loginBtnFacebook {
-  width: auto;
+  min-width: 15vw;
   box-sizing: border-box;
   position: relative;
   margin: 0.2em;
@@ -36,12 +38,13 @@
   border-radius: 0.2em;
   font-size: 1em;
   color: #354C8C;
+  font-weight: bold;
 }
 .loginBtnFacebook:hover {
   border: 0.4em solid #354C8C;
 }
 .loginBtnTwitter {
-  width: auto;
+  min-width: 15vw;
   box-sizing: border-box;
   position: relative;
   margin: 0.2em;
@@ -52,12 +55,13 @@
   border-radius: 0.2em;
   font-size: 1em;
   color: #00aced;
+  font-weight: bold;
 }
 .loginBtnTwitter:hover {
     border: 0.4em solid #00aced;
 }
 .loginBtnGithub {
-  width: auto;
+  min-width: 15vw;
   box-sizing: border-box;
   position: relative;
   margin: 0.2em;
@@ -68,8 +72,9 @@
   border-radius: 0.2em;
   font-size: 1em;
   color: #24292e;
+  font-weight: bold;
 }
 /*Btn Hover*/
 .loginBtnGithub:hover{
-  border: 2px solid #24292e;
+  border: 0.4em solid #24292e;
 }

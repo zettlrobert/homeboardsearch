@@ -4,7 +4,7 @@ import GoogleSignIn from './../Authentification/GoogleSignIn';
 import FacebookSignIn from './../Authentification/FacebookSignIn';
 import TwitterSignIn from './../Authentification/TwitterSignIn';
 import GitHubSignIn from './../Authentification/GitHubSignIn';
-import classes from './Landingpage.css';
+import classes from './CSS/Landingpage.css';
 
 
 
@@ -12,8 +12,11 @@ import classes from './Landingpage.css';
 //Icons for Buttons //
 //////////////////////
 import Icon from 'react-icons-kit';
-import { twitter } from 'react-icons-kit/fa/twitter';
-import { github } from 'react-icons-kit/fa/github';
+import { ic_new_releases } from 'react-icons-kit/md/ic_new_releases';
+import { ic_update } from 'react-icons-kit/md/ic_update';
+import { ic_trending_up } from 'react-icons-kit/md/ic_trending_up';
+import { ic_code } from 'react-icons-kit/md/ic_code';
+import { ic_person } from 'react-icons-kit/md/ic_person';
 
 const LandingPage = () => {
   return (
@@ -21,20 +24,12 @@ const LandingPage = () => {
 
 
       <div className={classes.SignInOptionsContainer}>
-        <div>
-          <h2>Please Sign In!</h2>
-        </div>
-
           <div className={classes.SignInOptios}>
-
+            <h2>Sign In:</h2>
             <GoogleSignIn firebase={ firebase }/>
-
             <FacebookSignIn firebase={ firebase }/>
-
             <TwitterSignIn firebase={ firebase }/>
-
             <GitHubSignIn firebase={ firebase }/>
-
           </div>
       </div>
 
@@ -70,10 +65,49 @@ const LandingPage = () => {
           <li>Search with one Application!</li>
           </ul>
         </div>
-
-
       </div>
+
+      <div className={classes.contentBox1}>
+        <div className={classes.ContentInDev}>
+          <h2>Still in Development</h2>
+        </div>
+      </div>
+
+      <div className={classes.contentBox2}>
+        <div className={classes.Content2}>
+          <Icon icon={ic_new_releases} size={52}/>
+          <h3>New Features in Development</h3>
+        </div>
+        <div className={classes.Content2}>
+          <Icon icon={ic_update} size={52}/>
+          <h3>Updating</h3>
+        </div>
+        <div className={classes.Content2}>
+          <Icon icon={ic_trending_up} size={52}/>
+          <h3>Steady Progress</h3>
+        </div>
+        <div className={classes.Content2}>
+          <Icon icon={ic_code} size={52}/>
+          <h3>Secure Code</h3>
+        </div>
+        <div className={classes.Content2}>
+          <Icon icon={ic_person} size={52}/>
+          <h3>One Person Project</h3>
+        </div>
+      </div>
+
+      <div className={classes.contentBox1}>
+        <div className={classes.Content}>
+          <a href="mailto:zettl.robert@gmail.com">If you have Quetions feel free to Send an Email to Robert Zettl</a>
+        </div>
+      </div>
+
+
+
+
+
     </div>
+
   );
 }
 

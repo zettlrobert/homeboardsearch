@@ -3,6 +3,7 @@ import * as firebase from 'firebase';
 import './App.css';
 // import GoogleSignIn from './Authentification/GoogleSignIn';
 import Header from './Pageres/Header';
+import Footer from './Pageres/Footer';
 import Content from './Content/Content';
 import LandingPage from './Landingpage/Landingpage';
 
@@ -72,13 +73,14 @@ class App extends Component {
       <div>
         <Header />
         <LandingPage/>
+        <Footer />
 
       </div>
     );
     }
 
     return (
-      <div className="App" style={{height: '100vh', background: 'lightgrey'}}>
+      <div className="App" style={{background: 'lightgrey', padding: '0'}}>
       {pageContent}
       </div>
     );

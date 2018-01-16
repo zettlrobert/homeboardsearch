@@ -1,0 +1,28 @@
+.UserInfoWrapper {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1em;
+  padding-left: 0.5em;
+  /* padding-top: 2em;
+  padding-bottom: 2em; */
+  background-color: #312e41;
+}
+
+img {
+  border: 0.1em solid white;
+  width: 10vw;
+  border-radius: 50%;
+}
+
+.Information {
+  border: 2px solid white;
+
+}
+
+.UserName {
+  font-size: 1.3em;
+  color: white;
+  margin-left: 0.5em;
+}

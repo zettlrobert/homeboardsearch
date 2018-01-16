@@ -62,3 +62,21 @@ Coded Twitter Login https://firebase.google.com/docs/auth/web/twitter-login
 GitHubSignIn
 https://firebase.google.com/docs/auth/web/github-auth
 Register app as dev on GitHub https://github.com/settings/applications/new
+
+15.01.2018
+Created Heroku Account
+Download and install Heroku CLI https://devcenter.heroku.com/articles/heroku-cli
+cmd -> heroku login
+how to deploy using Heroku Git https://dashboard.heroku.com/apps/homeboardsearch/deploy/heroku-git
+Some Styling and created Searchbar
+
+
+18.01.2018
+Created UserInfo (Name and Picture), Inserted into SideNav
+changed colors
+Adjusted Searchparameters with Survey
+
+
+install superagent --s
+install cors
+install body-parser

@@ -1,0 +1,77 @@
+.Wrapper {
+  /* border: 5px dotted red; */
+  height: 100%;
+  padding-bottom: 1.5em;
+}
+
+.SignInOptionsContainer {
+  /* border: 5px solid blue; */
+  background-color: #312e41;
+  box-sizing: border-box;
+}
+
+h2 {
+  align-self: center;
+  color: white;
+}
+
+.SignInOptios {
+  /* border: 2px solid red; */
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Content Style*/
+.contentBox1 {
+  /* border: 2px solid orange; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.Content {
+  background-color: #312e41;
+  border: 1px solid blue;
+  margin: 1em;
+  padding: 1em;
+  color: white;
+}
+
+.ContentInDev {
+  background-color: #312e41;
+  border: 1px solid blue;
+  padding: 1em;
+  color: white;
+  width: 100vw;
+  text-align: center;
+}
+
+ul {
+  border: 2px solid black;
+  margin: 1em;
+  padding: 1em;
+}
+
+.contentBox2 {
+  /* border: 2px solid orange; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+
+.Content2 {
+  /* border: 1px solid blue; */
+  margin: 1em;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  color: #312e41;
+}
