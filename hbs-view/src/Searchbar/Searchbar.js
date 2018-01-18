@@ -8,8 +8,11 @@ class Searchbar extends Component {
    sendInformation = () => {
     axios.post('http://localhost:3300/search', {
       query : this.refs.searchParam.value,
-      webSearch : this.refs.checkbox1.checked,
-      imageSearch : this.refs.image_search.checked
+      webSearch : this.refs.webSearch.checked,
+      imageSearch : this.refs.imageSearch.checked,
+      newsSearch : this.refs.newsSearch.checked,
+      videoSearch : this.refs.videoSearch.checked,
+      pdfSearch : this.refs.pdfSearch.checked
 
     }).then(function (response) {
       console.log(response);
@@ -17,6 +20,10 @@ class Searchbar extends Component {
       console.log(error);
     });
   }
+
+////////////////////////////////////////////////////////////////////////
+// ACCEESS SEARCH WITH REF to use in backend name for use in FrontEnd //
+////////////////////////////////////////////////////////////////////////
 
   render () {
     return (
@@ -28,32 +35,32 @@ class Searchbar extends Component {
           <div className={classes.checkOptions}>
 
               <div className={classes.options}>
-                <input type="checkbox" id="checkbox_1" ref="checkbox1" name="queryOption" value="Web Search"></input>
+                <input type="checkbox" ref="webSearch" id="checkbox_1" name="qO_webSearch" value="Web Search"></input>
                 <label htmlFor="checkbox_1">Web Search</label>
               </div>
 
               <div className={classes.options}>
-                <input className={classes.checkbox} type="checkbox" ref="image_search" id="checkbox_2" name="queryOption" value="Image"></input>
+                <input type="checkbox" ref="imageSearch" id="checkbox_2" name="qO_imageSearch" value="Image"></input>
                 <label htmlFor="checkbox_2">Image Search</label>
               </div>
 
               <div className={classes.options}>
-                <input className={classes.checkbox} type="checkbox" id="checkbox_3" name="queryOption" value="News"></input>
+                <input type="checkbox" ref="newsSearch" id="checkbox_3" name="qO_newsSearch" value="News"></input>
                 <label htmlFor="checkbox_3">News Search</label>
               </div>
 
               <div className={classes.options}>
-                <input className={classes.checkbox} type="checkbox" id="checkbox_4" name="queryOption" value="Video"></input>
+                <input type="checkbox" ref="videoSearch" id="checkbox_4" name="qO_videoSearch" value="Video"></input>
                 <label htmlFor="checkbox_4">Video Search</label>
               </div>
 
               <div className={classes.options}>
-                <input className={classes.checkbox} type="checkbox" id="checkbox_5" name="queryOption" value="PDF"></input>
+                <input type="checkbox" ref="pdfSearch" id="checkbox_5" name="qO_pdfSearch" value="PDF"></input>
                 <label htmlFor="checkbox_5">PDF Search</label>
               </div>
           </div>
 
-          <input className={classes.inputBarAndSubmit} onClick={this.sendInformation} type="button" value="Search"></input>
+          <input className={classes.sendQuery} onClick={this.sendInformation} type="button" value="Search"></input>
         </form>
 
       </div>
