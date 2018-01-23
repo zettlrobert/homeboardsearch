@@ -31,12 +31,17 @@ app.get('/', function (req, res) {
   res.send('Hello World from rootserver/index.js');
 })
 
+
+//Form Posted
 app.post('/search', function (req, res) {
+//log Request body (information from form )
   console.log(req.body);
+//Send data ToAPI request as parameter
   sendDataToApi(req);
+
+  //???
   res.send('root');
-  console.log('does it search???');
-  GoogleCustomSearch();
+
 })
 
 
@@ -46,22 +51,14 @@ app.listen(PORT, function () {
 })
 
 
+//////////////////////////////
+//GET DATA TO APIS          //
+//Send data to diffrent API //
+//////////////////////////////
 function sendDataToApi(req){
+  //Search Input
   console.log(req.body.query);
-  GoogleApi.test();
+
+//send to google api
+  GoogleApi.GoogleCustomSearch(req);
 }
-
-
-///////////////////////
-//GoogleSearchEngine //
-///////////////////////
-let GoogleCustomSearch = function() {
-  var cx = 'homeboardsearch';
-  var gcse = document.createElement('script');
-  gcse.type = 'text/javascript';
-  gcse.async = true;
-  gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(gcse, s);
-  console.log("Google Search gets Triggered");
-};
