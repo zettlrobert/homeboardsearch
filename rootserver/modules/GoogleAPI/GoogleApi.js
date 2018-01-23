@@ -16,7 +16,6 @@ GoogleCustomSearch(req) {
 .then(function (response) {
   console.log('What kind of response' + response);
   var mySearchResults = response;
-
   //Console Log some Search Information
   console.log(mySearchResults);
 })
