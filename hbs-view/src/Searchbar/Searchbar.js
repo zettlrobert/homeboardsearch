@@ -14,9 +14,9 @@ class Searchbar extends Component {
       videoSearch : this.refs.videoSearch.checked,
       pdfSearch : this.refs.pdfSearch.checked
 
-    }).then(function (response) {
-      console.log(response);
-    }).catch(function (error) {
+    }).then( (res) => {console.log({res});
+      this.props.onSearched(res.data);
+    }).catch( (error) => {
       console.log(error);
     });
   }

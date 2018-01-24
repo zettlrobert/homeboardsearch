@@ -4,6 +4,10 @@ var axios = require('axios');
 module.exports = {
 
 GoogleCustomSearch(req) {
+
+//wrapper promise, wen anfrage bestätigt oder abgelehnt
+return new Promise( (resolve, reject) => {
+
   console.log('Access to Data from Searchbar' + req.body.query);
 
   axios.get('https://www.googleapis.com/customsearch/v1?',  {
@@ -13,15 +17,21 @@ GoogleCustomSearch(req) {
       q : req.body.query
   }
   })
-.then(function (response) {
-  console.log('What kind of response' + response);
-  var mySearchResults = response;
-  //Console Log some Search Information
-  console.log(mySearchResults);
-})
-.catch(function (error) {
-  console.log ('this fucking ERROR' + error);
-})
+  .then(function (response) {
+    // console.log('What kind of response' + response);
+    var mySearchResults = response;
+    //Console Log some Search Information
+    // console.log(mySearchResults);
+    //anfrage ausgeführt, zurück an index
+    resolve(response.data.items);
+  })
+  .catch(function (error) {
+    console.log ('this fucking ERROR' + error);
+    //anfrage fehlgeschlagen zurück an index
+    reject(error);
+  });
+
+});
 
 }
 

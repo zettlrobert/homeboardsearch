@@ -34,13 +34,20 @@ app.get('/', function (req, res) {
 
 //Form Posted
 app.post('/search', function (req, res) {
-//log Request body (information from form )
+  //log Request body (information from form )
   console.log(req.body);
-//Send data ToAPI request as parameter
-  sendDataToApi(req);
+
+  //Send data ToAPI request as parameter
+  GoogleApi.GoogleCustomSearch(req).then( items => {
+    //Ans Frontend wen erfolgreich
+    // console.log(items);
+    res.send(items);
+  }).catch( err => {
+    //Wen Fehlgeschlagen
+    res.status(500).send(err);
+  });
 
   //???
-  res.send('root');
 
 })
 

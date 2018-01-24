@@ -1,5 +1,6 @@
 .footer {
   /* border: 2px solid blue; */
+  box-sizing: border-box;
   padding: 1em;
   margin: 0;
   text-align: center;

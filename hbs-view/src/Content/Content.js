@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import * as firebase from 'firebase';
 import Header from './../Pageres/Header';
 import Footer from './../Pageres/Footer';
@@ -6,7 +6,22 @@ import MySideNav from './../Sidenav/Sidenav';
 import classes from './CSS/Content.css';
 import Searchbar from './../Searchbar/Searchbar';
 
-const Content = () => {
+class Content extends Component {
+
+state = {
+  items: []
+};
+
+updateContent = (items) => {
+  this.setState({items});
+}
+
+render(){
+  let blocks = [];
+
+  this.state.items.forEach( item => {
+    blocks.push(<div className={classes.someContent}>{item.title} - {item.link}</div>);
+  });
 
   return (
     <div>
@@ -19,22 +34,18 @@ const Content = () => {
 
         <div className={classes.contentBox}>
           <div>
-            <Searchbar />
+            <Searchbar onSearched={this.updateContent} />
           </div>
-          <div className={classes.someContent}>This Content1</div>
-          <div className={classes.someContent}>This Content2</div>
-          <div className={classes.someContent}>This Content3</div>
-          <div className={classes.someContent}>This Content4</div>
-          <div className={classes.someContent}>This Content5</div>
-          <div className={classes.someContent}>This Content6</div>
-          <div className={classes.someContent}>This Content7</div>
-          <div className={classes.someContent}>This Content8</div>
+
+          {blocks}
+
         </div>
       </div>
 
       <Footer />
     </div>
   );
+}
 }
 
 export default Content;
