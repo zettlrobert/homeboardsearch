@@ -48,7 +48,7 @@ app.post('/search', function(req, res) {
 //     console.log("Error with Google Promise: " + err);
 //   })
 // })
-//
+
 // const DuckDuckGoApiProm = new Promise(function(resolve, reject) {
 //   DuckDuckGoApi.DuckDuckGoSearch(req).then(items => {
 //     console.log("This are my DuckDuckGo Results");
@@ -58,7 +58,7 @@ app.post('/search', function(req, res) {
 //     console.log("Error with DuckDuckGo Promise: " + err);
 //   })
 // })
-//
+
 // ///////////////////////////////////////
 // //Promise All to get Data to ALL API //
 // ///////////////////////////////////////
@@ -69,10 +69,17 @@ app.post('/search', function(req, res) {
 //   }).catch(err => {
 //     console.log("Error with Promise.all" + err);
 //   })
-Promise.all([GoogleApi.GoogleCustomSearch(req), DuckDuckGoApi.DuckDuckGoSearch(req)]).then( items => {
-  console.log(req.body.query);
-  res.send(items);
+
+
+
+Promise.all([
+            GoogleApi.GoogleCustomSearch(req),
+            DuckDuckGoApi.DuckDuckGoSearch(req)
+          ])
+.then( items => {
+  resolve.res.send(items);
 }).catch(err => {
+
   console.log("Error in Promise All" + err);
 })
 

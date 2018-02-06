@@ -33,7 +33,6 @@ render(){
 
   if(this.state.id ==="Google") {
     console.log("Google Results");
-
   } else {
     if(this.state.id === "DuckDuckGo") {
       console.log("DuckDuckGo");
@@ -43,8 +42,6 @@ render(){
       }
     }
   }
-
-
 
 //moz filter .filter
   this.state.items.forEach( item => {

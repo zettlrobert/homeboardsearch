@@ -196,3 +196,22 @@ if the search results include a promotions property it contains a set of promoti
 REST from JS
 You can invoke the JSON/Atom Custom Search API using REST from JavaScript, using the callback query parameter and a callback function.
 This allows you to write rich applications that display Custom Search data without writing any server side code.
+
+
+
+
+
+
+
+
+
+DuckDuckGo
+DuckDuckGo only has Access to instant Answers via Instant Answer API https://duckduckgo.com/api
+Does not include all DDG links.
+Not a full search results API, no Search Results beyond Instant Answers
+Instant answers come from a variety of sources, including Wikipedia, Wikia, CrunchBase, GitHub, WikiHow, The Free Dictionary – over 100 in total.
+
+
+using node-ddg from jawerty https://github.com/jawerty/node-ddg
+1. install npm ddg --s
+2.

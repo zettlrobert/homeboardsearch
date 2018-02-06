@@ -16,19 +16,16 @@ return new Promise( (resolve, reject) => {
       cx : '018170918728530060604:nf7onga_kd8',
       q : req.body.query
   }
-  })
   
+  })
+
+
   .then(function (response) {
     // console.log('What kind of response' + response);
-    var mySearchResults = response;
     //Console Log some Search Information
     // console.log(mySearchResults);
     //anfrage ausgeführt, zurück an index
-    console.log('\n');
-    console.log('\n');
-    console.log('\n');
-    console.log('\n');
-    console.log(response.data.items)
+    console.log(response);
     resolve(response.data.items);
   })
   .catch(function (error) {
