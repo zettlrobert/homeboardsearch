@@ -61,7 +61,7 @@ const LandingPage = () => {
           <h3>Homeboard Search Features</h3>
           <li>Search with Google</li>
           <li>Search with Bing</li>
-          <li>Search with Yahoo</li>
+          <li>Search with DuckDuckGo</li>
           <li>Search with one Application!</li>
           </ul>
         </div>

@@ -17,3 +17,44 @@
 .NavItemPadding {
   padding: 0.5em;
 }
+
+/* Dashboard Icon */
+.Dashboard {
+  color: white;
+  border: 1px solid white;
+  height: 40px;
+  width: 40px;
+  padding: 0.1em;
+  margin: 0px;
+  border-radius: 0;
+}
+/* Google Ico */
+.Google {
+  color: white;
+  border: 1px solid white;
+  height: 100%;
+  width: 100%;
+  padding: 0.1em;
+  margin: 0px;
+  border-radius: 0;
+}
+/* DuckDuckGo SVG */
+.DuckDuckGo {
+  color: white;
+  border: 1px solid white;
+  height: 40px;
+  width: 100%;
+  padding: 0.1em;
+  margin: 0px;
+  border-radius: 0;
+}
+/* DuckDuckGo SVG */
+.Bing {
+  color: white;
+  border: 1px solid white;
+  height: 40px;
+  width: 100%;
+  padding: 0.1em;
+  margin: 0px;
+  border-radius: 0;
+}

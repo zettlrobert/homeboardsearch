@@ -5,7 +5,8 @@ var cors = require('cors')
 var app = express();
 var bodyParser = require('body-parser');
 //Require modules GoogleAPI
-var GoogleApi = require('./modules/GoogleAPI/GoogleAPI.js');
+var GoogleApi = require('./modules/GoogleAPI/GoogleApi.js');
+var DuckDuckGoApi = require('./modules/DuckDuckGoAPI/DuckDuckGoApi');
 
 app.use(cors())
 app.use(bodyParser.json()); // for parsing application/json
@@ -31,25 +32,53 @@ app.get('/', function (req, res) {
   res.send('Hello World from rootserver/index.js');
 })
 
+//A Search Request is made!
+app.post('/search', function(req, res) {
+//   console.log("This is the Searchquery from Searchbar Form:");
+//   console.log(req.body);
+// ////////////////////////////
+// //Create Promises For API //
+// ////////////////////////////
+// const GoogleApiProm = new Promise(function(resolve, reject) {
+//   GoogleApi.GoogleCustomSearch(req).then(items => {
+//     console.log("This are my Google Results");
+//     console.log(res);
+//     res.send(items);
+//   }).catch(err => {
+//     console.log("Error with Google Promise: " + err);
+//   })
+// })
+//
+// const DuckDuckGoApiProm = new Promise(function(resolve, reject) {
+//   DuckDuckGoApi.DuckDuckGoSearch(req).then(items => {
+//     console.log("This are my DuckDuckGo Results");
+//     console.log(res);
+//     res.send(items);
+//   }).catch(err => {
+//     console.log("Error with DuckDuckGo Promise: " + err);
+//   })
+// })
+//
+// ///////////////////////////////////////
+// //Promise All to get Data to ALL API //
+// ///////////////////////////////////////
+// Promise.all([GoogleApiProm, DuckDuckGoApiProm])
+//   .then(function(values) {
+//     console.log("Promise all Results:")
+//     console.log(values);
+//   }).catch(err => {
+//     console.log("Error with Promise.all" + err);
+//   })
+Promise.all([GoogleApi.GoogleCustomSearch(req), DuckDuckGoApi.DuckDuckGoSearch(req)]).then( items => {
+  console.log(req.body.query);
+  res.send(items);
+}).catch(err => {
+  console.log("Error in Promise All" + err);
+})
 
-//Form Posted
-app.post('/search', function (req, res) {
-  //log Request body (information from form )
-  console.log(req.body);
-
-  //Send data ToAPI request as parameter
-  GoogleApi.GoogleCustomSearch(req).then( items => {
-    //Ans Frontend wen erfolgreich
-    // console.log(items);
-    res.send(items);
-  }).catch( err => {
-    //Wen Fehlgeschlagen
-    res.status(500).send(err);
-  });
-
-  //???
 
 })
+
 
 
 //RUN
@@ -64,8 +93,7 @@ app.listen(PORT, function () {
 //////////////////////////////
 function sendDataToApi(req){
   //Search Input
-  console.log(req.body.query);
-
-//send to google api
+  console.log("sendDataToApi Log " + req.body.query);
   GoogleApi.GoogleCustomSearch(req);
+  DuckDuckGoApi.DuckDuckGoSearch(req);
 }

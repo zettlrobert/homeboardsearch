@@ -4,7 +4,9 @@ import axios from 'axios';
 
 
 class Searchbar extends Component {
-
+////////////////////////////////
+//Send Information To Backend //
+////////////////////////////////
    sendInformation = () => {
     axios.post('http://localhost:3300/search', {
       query : this.refs.searchParam.value,
@@ -17,7 +19,7 @@ class Searchbar extends Component {
     }).then( (res) => {console.log({res});
       this.props.onSearched(res.data);
     }).catch( (error) => {
-      console.log(error);
+      console.log("Error sending Form: " + error);
     });
   }
 

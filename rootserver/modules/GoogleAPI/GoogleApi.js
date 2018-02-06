@@ -8,7 +8,7 @@ GoogleCustomSearch(req) {
 //wrapper promise, wen anfrage bestätigt oder abgelehnt
 return new Promise( (resolve, reject) => {
 
-  console.log('Access to Data from Searchbar' + req.body.query);
+  console.log('Google API Access Data from Searchbar ' + req.body.query);
 
   axios.get('https://www.googleapis.com/customsearch/v1?',  {
     params : {
@@ -17,12 +17,18 @@ return new Promise( (resolve, reject) => {
       q : req.body.query
   }
   })
+  
   .then(function (response) {
     // console.log('What kind of response' + response);
     var mySearchResults = response;
     //Console Log some Search Information
     // console.log(mySearchResults);
     //anfrage ausgeführt, zurück an index
+    console.log('\n');
+    console.log('\n');
+    console.log('\n');
+    console.log('\n');
+    console.log(response.data.items)
     resolve(response.data.items);
   })
   .catch(function (error) {

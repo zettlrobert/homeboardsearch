@@ -16,11 +16,44 @@ updateContent = (items) => {
   this.setState({items});
 }
 
+contentChange = (id) => {
+  this.setState({id});
+}
+
 render(){
   let blocks = [];
 
+  // if(this.state.id === "Google") {
+  //   console.log("google results");
+  //   } else (this.state.id === "DuckDuckGo") {
+  //     console.log("DDG Results");
+  //     } else (this.state.id === "Bing") {
+  //       console.log("Bing Results")
+  // }
+
+  if(this.state.id ==="Google") {
+    console.log("Google Results");
+
+  } else {
+    if(this.state.id === "DuckDuckGo") {
+      console.log("DuckDuckGo");
+    } else {
+      if(this.state.id === "Bing") {
+        console.log("Bing");
+      }
+    }
+  }
+
+
+
+//moz filter .filter
   this.state.items.forEach( item => {
-    blocks.push(<div className={classes.someContent}>{item.title} - {item.link}</div>);
+    blocks.push(
+      <div className={classes.someContent}>
+        <h3>{item.title}</h3>
+       <a href={item.link}>{item.link} target="_blank"></a>
+      </div>
+    );
   });
 
   return (
@@ -29,7 +62,7 @@ render(){
 
       <div className={classes.contentWrapper}>
         <div className={classes.NavContainer}>
-          <MySideNav />
+          <MySideNav onGResultChange={this.contentChange} />
         </div>
 
         <div className={classes.contentBox}>

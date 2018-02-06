@@ -38,7 +38,7 @@ h2 {
   background-color: #312e41;
   border: 1px solid blue;
   margin: 1em;
-  padding: 1em;
+  padding: 2em;
   color: white;
 }
 
@@ -54,7 +54,7 @@ h2 {
 ul {
   border: 2px solid black;
   margin: 1em;
-  padding: 1em;
+  padding: 2em;
 }
 
 .contentBox2 {

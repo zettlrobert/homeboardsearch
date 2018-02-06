@@ -6,7 +6,9 @@ const Header = () => {
     <div>
 
       <header className={classes.header}>
-        <h1>Homeboard Search</h1>
+        <h1 className={classes.headline}>
+          Homeboard Search
+        </h1>
       </header>
     </div>
 
