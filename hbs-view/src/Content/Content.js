@@ -9,6 +9,7 @@ import Searchbar from './../Searchbar/Searchbar';
 class Content extends Component {
 
 state = {
+  id: "",
   items: []
 };
 
@@ -31,27 +32,49 @@ render(){
   //       console.log("Bing Results")
   // }
 
-  if(this.state.id ==="Google") {
-    console.log("Google Results");
-  } else {
-    if(this.state.id === "DuckDuckGo") {
-      console.log("DuckDuckGo");
+  if(this.state.id === "Dashboard"){
+
+
+
+
+
+  }else{
+
+    if(this.state.id ==="Google") {
+      console.log("Google Results");
     } else {
-      if(this.state.id === "Bing") {
-        console.log("Bing");
+      if(this.state.id === "DuckDuckGo") {
+        console.log("DuckDuckGo");
+      } else {
+        if(this.state.id === "Bing") {
+          console.log("Bing");
+        }
       }
     }
+
+  //moz filter .filter
+    this.state.items.filter( (item) => {
+      return item.searchApi === this.state.id;
+    }).forEach( item => {
+      if(this.state.id ==="Google"){
+        blocks.push(
+          <div className={classes.someContent}>
+            <h3>{item.title}</h3>
+           <a href={item.link}>{item.link} target="_blank"></a>
+          </div>
+        );
+      }else if(this.state.id ==="DuckDuckGo"){console.log(item);
+        blocks.push(
+          <div className={classes.someContent}>
+            <h3>{item.Text}</h3>
+           <a href={item.FirstURL}>{item.FirstURL} target="_blank"></a>
+          </div>
+        );
+      }
+    });
+
   }
 
-//moz filter .filter
-  this.state.items.forEach( item => {
-    blocks.push(
-      <div className={classes.someContent}>
-        <h3>{item.title}</h3>
-       <a href={item.link}>{item.link} target="_blank"></a>
-      </div>
-    );
-  });
 
   return (
     <div>
@@ -59,7 +82,7 @@ render(){
 
       <div className={classes.contentWrapper}>
         <div className={classes.NavContainer}>
-          <MySideNav onGResultChange={this.contentChange} />
+          <MySideNav onResultChange={this.contentChange} />
         </div>
 
         <div className={classes.contentBox}>

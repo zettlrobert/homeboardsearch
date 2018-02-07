@@ -31,15 +31,13 @@ class MySideNav extends React.Component {
     console.log('clicked', id);
     if(id === "dashboard") {
       console.log('Load Dashboard');
-    } else {
-      if(id === "Google") {
-        console.log('Google');
-        // this.props.onGResultChange("Google");
-      } else {
-        if(id === "sign_out") {
-          this.signOut();
-        }
-      }
+      this.props.onResultChange("Dashboard");
+    } else if(id === "Google") {
+      this.props.onResultChange("Google");
+    } else if(id === "DuckDuckGo") {
+      this.props.onResultChange("DuckDuckGo");
+    } else if(id === "sign_out") {
+        this.signOut();
     }
   }
 

@@ -76,8 +76,25 @@ Promise.all([
             GoogleApi.GoogleCustomSearch(req),
             DuckDuckGoApi.DuckDuckGoSearch(req)
           ])
-.then( items => {
-  resolve.res.send(items);
+.then( values => { console.log(' >> PROMISE ALL THEN');
+  let googleRes = values[0];
+  let ddgRes = values[1];
+
+  // Add Indentifier
+  googleRes = googleRes.map( (item) => {
+    item.searchApi = "Google";
+    return item;
+  });
+  ddgRes = ddgRes.map( (item) => {
+    item.searchApi = "DuckDuckGo";
+    return item;
+  });
+
+  // All Items
+  let allItems = googleRes.concat(ddgRes);
+  console.log({allItems});
+
+  res.send(allItems);
 }).catch(err => {
 
   console.log("Error in Promise All" + err);

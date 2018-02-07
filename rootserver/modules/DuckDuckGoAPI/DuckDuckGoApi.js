@@ -18,27 +18,23 @@ module.exports = {
       }
 
       ddg.query(req.body.query, options, function(err, data) {
+
+          if(err){
+            return reject(err);
+          }
+
           var	results = data.RelatedTopics; //related topics is a list of 'related answers'
 
-          for (i=0;i<results.length;i++) {
-              console.log(''+results[i].FirstURL);
-              console.log('-- '+results[i].Text);
-              console.log('\n');
-          }
+          // for (i=0;i<results.length;i++) {
+          //     console.log(''+results[i].FirstURL);
+          //     console.log('-- '+results[i].Text);
+          //     console.log('\n');
+          // }
+          resolve(results);
 
       })
 
-    })
-    .then(function(response) {
-      console.log(ddgFirstURL);
-      console.log(ddgText);
-      console.log(response.data.RelatedTopics);
-      resolve(response.data.RelatedTopics);
-    })
-    .catch(err => {
-      console.log("DDG Rejected: " + err);
-      reject(err);
-    })
+    });
   }
 
 
