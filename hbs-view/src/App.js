@@ -72,7 +72,7 @@ class App extends Component {
     pageContent = (
       <div>
         <Header />
-        <LandingPage/>
+        <LandingPage />
         <Footer />
 
       </div>

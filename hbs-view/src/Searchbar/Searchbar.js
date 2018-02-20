@@ -30,10 +30,8 @@ class Searchbar extends Component {
   render () {
     return (
       <div className={classes.searchWrapper}>
-        <form>
-          <input className={classes.inputBarAndSubmit} type="text" ref="searchParam" id="search" name="search_parameter" placeholder="Click to Enter Searchquerie"></input>
+        <form className={classes.inputForm}>
 
-          <h3>Select Search Category:</h3>
           <div className={classes.checkOptions}>
 
               <div className={classes.options}>
@@ -62,7 +60,8 @@ class Searchbar extends Component {
               </div>
           </div>
 
-          <input className={classes.sendQuery} onClick={this.sendInformation} type="button" value="Search"></input>
+          <input className={classes.inputBarAndSubmit} type="text" ref="searchParam" id="search" name="search_parameter" placeholder="Click to enter your Searchquerie"></input>
+          <input className={classes.sendQuery} onClick={this.sendInformation} type="button" value="Start Searchengine"></input>
         </form>
 
       </div>

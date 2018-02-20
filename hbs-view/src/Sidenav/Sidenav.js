@@ -29,8 +29,7 @@ class MySideNav extends React.Component {
   //Select nav Item
   onNavChange = (id) => {
     console.log('clicked', id);
-    if(id === "dashboard") {
-      console.log('Load Dashboard');
+    if(id === "Dashboard") {
       this.props.onResultChange("Dashboard");
     } else if(id === "Google") {
       this.props.onResultChange("Google");
@@ -38,6 +37,8 @@ class MySideNav extends React.Component {
       this.props.onResultChange("DuckDuckGo");
     } else if(id === "sign_out") {
         this.signOut();
+    } else if(!id) {
+      this.props.onResultChange("Dashboard");
     }
   }
 
@@ -45,14 +46,15 @@ render(){
   return (
     <div className={classes.NavWrapper}>
     <div className={classes.SideNav}>
-    <SideNav onItemSelection={this.onNavChange}
-    highlightColor='#E91E63'
-    highlightBgColor='#00bcd4'
+    <SideNav
+    onItemSelection={this.onNavChange}
+    highlightColor='#80f2ff'
+    highlightBgColor='#00a7bd'
     defaultSelected='dashboard'>
 
     <UserInfo />
 
-    <Nav id='dashboard'>
+    <Nav id='Dashboard'>
     <NavIcon><SvgIcon size={40} icon={home} className={classes.Dashboard}/></NavIcon>
     <NavText className={classes.NavItemPadding}>Homeboard</NavText>
     </Nav>

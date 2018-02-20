@@ -20,10 +20,6 @@ var serviceAccount = require("./homeboardsearch-394b4036b873.json"); //path to s
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount), // var sercieAccount func
 });
-// var db = admin.firebase(); look up how to connect to db when needed
-
-//modules
-
 
 /**
  * Routen
@@ -117,7 +113,7 @@ app.listen(PORT, function () {
 //////////////////////////////
 function sendDataToApi(req){
   //Search Input
-  console.log("sendDataToApi Log " + req.body.query);
+  console.log("Data is sent to API LOGIC >> " + req.body.query);
   GoogleApi.GoogleCustomSearch(req);
   DuckDuckGoApi.DuckDuckGoSearch(req);
 }

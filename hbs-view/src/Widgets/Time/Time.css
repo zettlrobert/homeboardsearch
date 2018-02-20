@@ -1,0 +1,26 @@
+.Watch {
+  /* border: 5px solid green; */
+  color: white;
+  margin: 0;
+  font-family: Impact;
+  margin: 0;
+  width: 20vw;
+}
+
+.WatchTick {
+  /* border: 2px solid red; */
+  margin: 0;
+  padding: 0;
+  padding-left: 1em;
+  font-size: 3em;
+}
+
+.Date {
+/* border: 2px solid red; */
+  margin: 0;
+  padding: 0;
+  font-size: 2em;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1em;
+}
