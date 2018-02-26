@@ -1,5 +1,5 @@
 .NavWrapper {
-  /* border: 2px dotted purple; */
+  box-sizing: border-box;
   font-size: 25px;
 }
 
@@ -15,11 +15,14 @@
 
 /* Applied to NavText */
 .NavItemPadding {
+  box-sizing: border-box;
   padding: 0.5em;
+  padding-left: 1em;
 }
 
 /* Dashboard Icon */
 .Dashboard {
+  box-sizing: border-box;
   color: white;
   border: 1px solid white;
   height: 40px;
@@ -30,6 +33,7 @@
 }
 /* Google Ico */
 .Google {
+  box-sizing: border-box;
   color: white;
   border: 1px solid white;
   height: 100%;
@@ -40,6 +44,7 @@
 }
 /* DuckDuckGo SVG */
 .DuckDuckGo {
+  box-sizing: border-box;
   color: white;
   border: 1px solid white;
   height: 40px;
@@ -50,6 +55,7 @@
 }
 /* DuckDuckGo SVG */
 .Bing {
+  box-sizing: border-box;
   color: white;
   border: 1px solid white;
   height: 40px;

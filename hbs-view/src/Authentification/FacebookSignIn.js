@@ -22,9 +22,9 @@ class FacebookSignIn extends Component {
 
 render () {
   return (
-    <div>
+    <div className={classes.AuthWrapper}>
     <button className={classes.loginBtnFacebook} onClick={this.loginWithFacebook}>
-    <Icon className={classes.signIconStyle}icon={ facebookOfficial } size={32}/>
+    <Icon className={classes.signIconStyle}icon={ facebookOfficial } size={52}/>
     Sign In with Facebook</button>
     </div>
   );

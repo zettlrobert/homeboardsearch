@@ -1,60 +1,237 @@
 .Wrapper {
   /* border: 5px dotted red; */
-  height: 100%;
+  box-sizing: border-box;
   padding-bottom: 1.5em;
-}
-
-.SignInOptionsContainer {
-  /* border: 5px solid blue; */
-  background-color: #312e41;
-  box-sizing: border-box;
-}
-
-h2 {
-  align-self: center;
-  color: white;
-}
-
-.SignInOptios {
-  /* border: 2px solid red; */
-  box-sizing: border-box;
   padding: 0;
+}
+/*Image Setup*/
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.90;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url('./../img/research.jpg');
+  min-height: 100vh;
+}
+
+.pimg2 {
+  background-image: url('./../img/sign-looking-for.jpg');
+  min-height: 100vh;
+}
+
+.pimg3 {
+  background-image: url('./../img/mountain.jpg');
+  min-height: 100vh;
+}
+
+/*Page Styling*/
+.signInOptions {
+  background-color: rgba(49, 46, 65, 0.5);
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 3em;
+  width: 20vw;
+  margin-top: 5vh;
+  margin-right: 10vw;
+  margin-bottom: 5vh;
+}
+
+.signInOptionsh2 {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 0.2em;
+}
+
+.login {
+  padding-right: 1em;
+}
+
+.ptext {
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.border {
+  box-sizing: border-box;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin: 0;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  background-color: rgba(49, 46, 65, 0.5);
+  padding: 1.5em;
+  width: 99vw;
+}
+
+.listWrapper {
+  box-sizing: border-box;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-image: url('./../img/scenery.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 30%;
+  width: 100%;
+}
+
+.contentDescription {
+  margin: 0;
+  margin-bottom: 2em;
+  padding: 1.4em;
+  font-size: 2.5em;
+  font-weight: bold;
+  background-color: rgba(49, 46, 65, 0.2);
+  border-top: 2px solid white;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+
+.ul {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0.5em;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.listItem {
+  color: white;
+  margin: 1em;
+  padding: 0;
+  font-size: 1.4em;
+  width: 30%;
+  background-color: rgba(133, 129, 142, 0.5);
+}
+
+.listItemDesc {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1em;
+  background-color: rgba(109, 105, 117, 0.5);
+  display: flex;
   align-items: center;
 }
 
-/*Content Style*/
-.contentBox1 {
-  /* border: 2px solid orange; */
+.Google, .DuckDuckGo, .Bing {
+  color: white;
+  border: none;
+  height: 3.5em;
+  width: 3.5em;
+  padding: 0.1em;
+  margin: 0px;
+  margin-right: 1em;
+  border-radius: 0;
+}
+
+.listItemCon {
+  box-sizing: border-box;
+  margin:0;
+  padding: 1em;
+}
+
+.border2{
+  box-sizing: border-box;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  background-color: rgba(49, 46, 65, 0.5);
+  width: 100%;
+  margin-top: 35%;
+  margin-bottom: 40%;
+  align-items: flex-end;
+  font-weight: bold;
+  font-size: 1.4em;
+  letter-spacing: normal;
+}
+
+.WidgetContainer {
+  box-sizing: border-box;
+  border-top: 3px solid white;
+  border-bottom: 1px solid white;
+  background-image: url('./../img/widgets.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding: 3em;
+  height: 100vh;
 }
 
-.Content {
-  background-color: #312e41;
-  border: 1px solid blue;
-  margin: 1em;
-  padding: 2em;
-  color: white;
+.Widgets {
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+  margin: 2em;
+  padding: 0;
+  padding-bottom: 1em;
+  background-color: rgba(173, 169, 173, 0.5);
+  width: 50%;
 }
 
-.ContentInDev {
-  background-color: #312e41;
-  border: 1px solid blue;
-  padding: 1em;
+.contentDescriptionWidget {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1.4em;
+  font-size: 2.5em;
+  font-weight: bold;
+  background-color: rgba(166, 160, 165, 0.6);
   color: white;
-  width: 100vw;
   text-align: center;
+  letter-spacing: 0.2em;
 }
 
-ul {
-  border: 2px solid black;
+.ulWidget {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItemW {
+  display: flex;
+  align-items: center;
+  padding: 1em;
   margin: 1em;
+  font-size: 2em;
+  color: white;
+}
+
+
+.clock, .list, .cloud {
+  margin-right: 1em;
+}
+
+.newspaper, .calendar, .bubbles, .youtube {
+  margin-right: 1em;
+}
+
+.devBorder {
+  border-left: 6px solid white;
+  border-right: 6px solid white;
+  margin-top: 30vh;
   padding: 2em;
+  margin-bottom: 10vh;
 }
 
 .contentBox2 {
@@ -65,13 +242,78 @@ ul {
   padding: 2em;
 }
 
-.Content2 {
+.aboutHBS {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: bold;
+  padding: 2em;
+}
+
+.devInfo {
   /* border: 1px solid blue; */
-  margin: 1em;
-  padding: 1em;
+  box-sizing: border-box;
+  font-weight: bold;
+  background-color: rgba(176, 171, 174, 0.1);
+  margin: 3em;
+  padding: 0.1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  color: #312e41;
+  color: white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.myBox {
+  box-sizing: border-box;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  margin-top: 20vh;
+  margin-bottom: 100vh;
+  padding: 2em;
+  font-size: 0.7em;
+  letter-spacing: normal;
+}
+
+.myImageCont {
+  box-sizing: border-box;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  background-color: rgba(176, 171, 174, 0.1);
+  display: flex;
+  padding: 2em;
+}
+
+.myImage {
+  box-sizing: border-box;
+  background: transparent;
+  border-radius: 0;
+  border: 1px solid white;
+  width: 520px;
+  height: 780px;
+}
+
+.contactMe {
+  box-sizing: border-box;
+  background-color: rgba(176, 171, 174, 0.3);
+  width: 50vw;
+  text-transform: none;
+  padding: 0;
+}
+
+.myRambling {
+  padding: 2em;
+  text-align: justify;
+}
+
+.ContactBox {
+  padding: 2em;
+  text-align: left;
+}
+
+.Email {
+  font-weight: bold;
 }

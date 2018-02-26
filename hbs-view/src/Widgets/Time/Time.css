@@ -1,14 +1,20 @@
+.WatchContainer {
+  width: 25vw;
+}
+
 .Watch {
   /* border: 5px solid green; */
-  color: white;
+  box-sizing: border-box;
+  color: black;
   margin: 0;
   font-family: Impact;
   margin: 0;
-  width: 20vw;
+  padding: 1em;
 }
 
 .WatchTick {
   /* border: 2px solid red; */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   padding-left: 1em;
@@ -17,6 +23,7 @@
 
 .Date {
 /* border: 2px solid red; */
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-size: 2em;

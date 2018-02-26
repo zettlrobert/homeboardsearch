@@ -1,6 +1,7 @@
 /* Icon Style */
 .signIconStyle {
   /* border: 1px solid black; */
+  box-sizing: border-box;
   margin: 0.3em;
   margin-right: 1em;
   vertical-align: middle;
@@ -8,71 +9,50 @@
   text-align: left;
 }
 
-/* Google */
-.loginBtnGoogle {
-  min-width: 15vw;
+/* Auth Button Shared Styles*/
+.AuthWrapper {
   box-sizing: border-box;
-  position: relative;
-  margin: 0.2em;
-  border: none;
+  width: 19vw;
+  padding: 0;
+  margin: 0.6em;
+  overflow: hidden;
+}
+
+.loginBtnGoogle, .loginBtnFacebook, .loginBtnTwitter, .loginBtnGithub {
+  border: solid 0.4em rgba(255, 255, 255, 0.01);
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.45);
   text-align: left;
   line-height: 34px;
   white-space: nowrap;
   border-radius: 0.2em;
   font-size: 1em;
   font-weight: bold;
+}
+
+
+.loginBtnGoogle {
+    box-sizing: border-box;
 }
 .loginBtnGoogle:hover {
   border: 0.4em solid black;
+  box-sizing: border-box;
 }
 /* Facebook */
 .loginBtnFacebook {
-  min-width: 15vw;
-  box-sizing: border-box;
-  position: relative;
-  margin: 0.2em;
-  border: none;
-  text-align: left;
-  line-height: 34px;
-  white-space: nowrap;
-  border-radius: 0.2em;
-  font-size: 1em;
   color: #354C8C;
-  font-weight: bold;
 }
 .loginBtnFacebook:hover {
   border: 0.4em solid #354C8C;
 }
 .loginBtnTwitter {
-  min-width: 15vw;
-  box-sizing: border-box;
-  position: relative;
-  margin: 0.2em;
-  border: none;
-  text-align: left;
-  line-height: 34px;
-  white-space: nowrap;
-  border-radius: 0.2em;
-  font-size: 1em;
   color: #00aced;
-  font-weight: bold;
 }
 .loginBtnTwitter:hover {
     border: 0.4em solid #00aced;
 }
 .loginBtnGithub {
-  min-width: 15vw;
-  box-sizing: border-box;
-  position: relative;
-  margin: 0.2em;
-  border: none;
-  text-align: left;
-  line-height: 34px;
-  white-space: nowrap;
-  border-radius: 0.2em;
-  font-size: 1em;
   color: #24292e;
-  font-weight: bold;
 }
 /*Btn Hover*/
 .loginBtnGithub:hover{

@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 //Require modules GoogleAPI
 var GoogleApi = require('./modules/GoogleAPI/GoogleApi.js');
 var DuckDuckGoApi = require('./modules/DuckDuckGoAPI/DuckDuckGoApi');
+var BingApi = require('./modules/BingAPI/BingApi');
 
 app.use(cors())
 app.use(bodyParser.json()); // for parsing application/json
@@ -30,51 +31,16 @@ app.get('/', function (req, res) {
 
 //A Search Request is made!
 app.post('/search', function(req, res) {
-//   console.log("This is the Searchquery from Searchbar Form:");
-//   console.log(req.body);
-// ////////////////////////////
-// //Create Promises For API //
-// ////////////////////////////
-// const GoogleApiProm = new Promise(function(resolve, reject) {
-//   GoogleApi.GoogleCustomSearch(req).then(items => {
-//     console.log("This are my Google Results");
-//     console.log(res);
-//     res.send(items);
-//   }).catch(err => {
-//     console.log("Error with Google Promise: " + err);
-//   })
-// })
-
-// const DuckDuckGoApiProm = new Promise(function(resolve, reject) {
-//   DuckDuckGoApi.DuckDuckGoSearch(req).then(items => {
-//     console.log("This are my DuckDuckGo Results");
-//     console.log(res);
-//     res.send(items);
-//   }).catch(err => {
-//     console.log("Error with DuckDuckGo Promise: " + err);
-//   })
-// })
-
-// ///////////////////////////////////////
-// //Promise All to get Data to ALL API //
-// ///////////////////////////////////////
-// Promise.all([GoogleApiProm, DuckDuckGoApiProm])
-//   .then(function(values) {
-//     console.log("Promise all Results:")
-//     console.log(values);
-//   }).catch(err => {
-//     console.log("Error with Promise.all" + err);
-//   })
-
-
 
 Promise.all([
             GoogleApi.GoogleCustomSearch(req),
-            DuckDuckGoApi.DuckDuckGoSearch(req)
+            DuckDuckGoApi.DuckDuckGoSearch(req),
+            BingApi.BingSearch(req)
           ])
 .then( values => { console.log(' >> PROMISE ALL THEN');
   let googleRes = values[0];
   let ddgRes = values[1];
+  let bingRes = values[2];
 
   // Add Indentifier
   googleRes = googleRes.map( (item) => {
@@ -85,9 +51,13 @@ Promise.all([
     item.searchApi = "DuckDuckGo";
     return item;
   });
+  bingRes = bingRes.map( (item) => {
+    item.searchApi = "Bing";
+    return item;
+  });
 
   // All Items
-  let allItems = googleRes.concat(ddgRes);
+  let allItems = googleRes.concat(ddgRes, bingRes);
   console.log({allItems});
 
   res.send(allItems);
@@ -116,4 +86,5 @@ function sendDataToApi(req){
   console.log("Data is sent to API LOGIC >> " + req.body.query);
   GoogleApi.GoogleCustomSearch(req);
   DuckDuckGoApi.DuckDuckGoSearch(req);
+  BingApi.BingSearch(req);
 }

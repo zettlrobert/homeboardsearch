@@ -3,27 +3,23 @@
   /* border: 5px solid green; */
   color: white;
   margin: 0;
-  padding: 0;
+  padding: 1em;
   font-family: Impact;
   font-size: 3em;
-  width: 51vw;
-  text-align: center;
+  width: 45vw;
 }
 
-.someNotes {
-  /* border: 2px solid red; */
-  border: none;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-size: 0.5em;
-  list-style: none;
-  text-align: center;
+
+
+
+
+.myTest {
+  border: 3px solid red;
+
 }
 
-.oneNote {
-  /* border: 2px solid blue; */
-  margin-top: 0.1em;
-  margin-bottom: 0.1em;
-  padding: 0.5em;
+
+.task {
+  padding: 1em;
+  border: 2 px solid blue;
 }

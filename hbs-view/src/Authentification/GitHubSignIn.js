@@ -22,9 +22,9 @@ class GitHubSignIn extends Component {
 
   render() {
     return (
-      <div>
+      <div className={classes.AuthWrapper}>
         <button className={classes.loginBtnGithub} onClick={this.loginWithGitHub}>
-        <Icon className={classes.signIconStyle} icon = { github } size={32}/>
+        <Icon className={classes.signIconStyle} icon = { github } size={52}/>
         Sign in With GitHub</button>
       </div>
     )

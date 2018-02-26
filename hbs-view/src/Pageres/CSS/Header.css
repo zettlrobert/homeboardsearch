@@ -1,19 +1,120 @@
+/*Header Shown*/
+.headerShow {
+  background: url('./../hbs-header-pictures/Header.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+.headlineShow {
+  box-sizing: border-box;
+  padding-top: 60vh;
+  padding-bottom: 5vh;
+  font-size: 4em;
+  margin: 0;
+  letter-spacing: 0.3em;
+}
+.arrowUpShow {
+  box-sizing: border-box;
+  vertical-align: bottom;
+  color: white;
+  background-color: rgba(82, 77, 108, 0.2);
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: jump 3s ease-in 0s infinite normal ;
+  animation: jump 3s ease-in 0s infinite normal ;
+  border: 2px solid white;
+}
+.taskLabelShow {
+  font-size: 2em;
+  align-items: flex-end;
+  bottom: 0;
+}
+
+/******************************************************/
+/****************** Header Hidden ******************/
+/******************************************************/
 .header {
   box-sizing: border-box;
-  /* border: 2px solid blue; */
-  padding: 3em;
-  text-align: center;
-  /* background: #2c3e50; */
-  background-image: url('./../hbs-header-pictures/mountains.svg');
+  background: url('./../hbs-header-pictures/Header.png');
   background-size: cover;
-  background-position: bottom;
+  background-position: 20% 50%;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 20vh;
   color: white;
-  font-weight: bold;
+  text-align: center;
+}
+
+.arrowUp:hover {
+  cursor: pointer;
 }
 
 .headline {
   box-sizing: border-box;
-  font-size: 3em;
-  padding: 0;
+  border: none;
+  font-size: 4em;
+  letter-spacing: 0.3em;
+  padding-top: 0.1em;
+  padding-bottom: 8vh;
   margin: 0;
+}
+
+.arrowUp {
+  box-sizing: border-box;
+  background: transparent;
+  border: 0;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin-top: -12%;
+  height: 20vh;
+  transform: scaleY(-1);
+}
+
+.arrowUp:focus {
+  outline: none;
+}
+
+.taskLabel {
+  display: none;
+}
+
+
+/******************************************************/
+/****************** Animation ******************/
+/******************************************************/
+@-webkit-keyframes jump {
+  0%{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+  }
+  20%{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+  }
+  40%{
+	-webkit-transform: translateY(-20px);
+	transform: translateY(-20px);
+  }
+  50%{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+  }
+  60%{
+	-webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+  }
+  80%{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+  }
+  100%{
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+  }
 }

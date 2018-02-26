@@ -20,9 +20,9 @@ class TwitterSignIn extends Component {
 
   render () {
     return (
-      <div>
+      <div className={classes.AuthWrapper}>
         <button className={classes.loginBtnTwitter} onClick={this.loginWithTwitter}>
-        <Icon className={classes.signIconStyle} icon={ twitter } size={32}/>
+        <Icon className={classes.signIconStyle} icon={ twitter } size={52}/>
         Sign in with Twitter
         </button>
       </div>

@@ -35,6 +35,8 @@ class MySideNav extends React.Component {
       this.props.onResultChange("Google");
     } else if(id === "DuckDuckGo") {
       this.props.onResultChange("DuckDuckGo");
+    } else if(id === "Bing") {
+      this.props.onResultChange("Bing");
     } else if(id === "sign_out") {
         this.signOut();
     } else if(!id) {

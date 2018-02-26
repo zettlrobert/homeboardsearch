@@ -27,7 +27,7 @@ componentWillUnmount() {
 
 updateDate() {
   this.setState({
-    time: new Date().toLocaleTimeString('en-GB'),
+    time: new Date().toLocaleTimeString(),
     date: new Date().getFullYear(),
     month: new Date().getMonth() + 1,
     day: new Date().getDate(),
@@ -40,17 +40,21 @@ render() {
 
   return (
     <div className={WidgetClasses.widget}>
-    <h4 className={WidgetClasses.widgetDescriptionTime}>Date and Time</h4>
+
+    <div className={classes.WatchContainer}>
+      <h4 className={WidgetClasses.widgetDescriptionTime}>Date and Time</h4>
       <div className={classes.Watch}>
         <p className={classes.WatchTick}>{this.state.time}</p>
         <p className={classes.Date}>{this.state.date}/{this.state.month}/{this.state.day}</p>
       </div>
     </div>
+
+    </div>
   );
 }
 
 componentDidMount(){
-  console.log("Whats wrong");
+  console.log("Time Working");
 }
 
 }

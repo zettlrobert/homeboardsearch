@@ -21,9 +21,9 @@ class GoogleSignIn extends Component {
 
   render () {
     return (
-      <div>
+      <div className={classes.AuthWrapper}>
         <button className={classes.loginBtnGoogle} onClick={this.loginWithGoogle}>
-        <Icon className={classes.signIconStyle} icon={ googlePlus } size={32}/>
+        <Icon className={classes.signIconStyle} icon={ googlePlus } size={52}/>
         Sign in with Google</button>
       </div>
     );

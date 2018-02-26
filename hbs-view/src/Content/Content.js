@@ -40,18 +40,6 @@ render(){
     </div>
     );
   } else {
-    if(this.state.id ==="Google") {
-      console.log("Google Results");
-    } else {
-      if(this.state.id === "DuckDuckGo") {
-        console.log("DuckDuckGo");
-      } else {
-        if(this.state.id === "Bing") {
-          console.log("Bing");
-        }
-      }
-    }
-
   //moz filter .filter
     this.state.items.filter( (item) => {
       return item.searchApi === this.state.id;
@@ -59,19 +47,29 @@ render(){
       if(this.state.id ==="Dashboard"){
         console.log("Dashboard >>>>>>>>>>>>>>>>>>>>>>>");
       }else if(this.state.id ==="Google"){
-        console.log(item);
+        console.log("Google API returning in Content Logging ITEMS");
         blocks.push(
-          <div className={classes.someContent}>
-            <h3 className={classes.itemHeading}>{item.title}</h3>
-           <a href={item.link} target="_blank" className={classes.linkStyle}>{item.link}></a>
-          </div>
+        <div className={classes.someContent}>
+          <h3 className={classes.itemHeading}>{item.title}</h3>
+            <div className={classes.linkWrap}>
+              <a href={item.link} target="_blank" className={classes.linkStyle}>{item.link}></a>
+           </div>
+        </div>
         );
       }else if(this.state.id ==="DuckDuckGo"){
-        console.log(item);
+        console.log("DDG API returning in Content Logging ITEMS");
         blocks.push(
           <div className={classes.someContent}>
             <h3 className={classes.itemHeading}>{item.Text}</h3>
-           <a href={item.FirstURL} target="_blank" className={classes.linkStyle}>{item.FirstURL}></a>
+              <div className={classes.linkWrap}>
+                <a href={item.FirstURL} target="_blank" className={classes.linkStyle}>{item.FirstURL}></a>
+              </div>
+          </div>
+        );
+      }else if(this.state.id ==="Bing"){
+        blocks.push(
+          <div>
+            { item.url }
           </div>
         );
       }

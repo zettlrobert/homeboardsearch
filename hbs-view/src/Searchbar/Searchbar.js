@@ -17,6 +17,7 @@ class Searchbar extends Component {
       pdfSearch : this.refs.pdfSearch.checked
 
     }).then( (res) => {console.log({res});
+      alert("Search Succesful");
       this.props.onSearched(res.data);
     }).catch( (error) => {
       console.log("Error sending Form: " + error);
@@ -36,32 +37,32 @@ class Searchbar extends Component {
 
               <div className={classes.options}>
                 <input type="checkbox" ref="webSearch" id="checkbox_1" name="qO_webSearch" value="Web Search"></input>
-                <label htmlFor="checkbox_1">Web Search</label>
+                <label htmlFor="checkbox_1">Web</label>
               </div>
 
               <div className={classes.options}>
                 <input type="checkbox" ref="imageSearch" id="checkbox_2" name="qO_imageSearch" value="Image"></input>
-                <label htmlFor="checkbox_2">Image Search</label>
+                <label htmlFor="checkbox_2">Images</label>
               </div>
 
               <div className={classes.options}>
                 <input type="checkbox" ref="newsSearch" id="checkbox_3" name="qO_newsSearch" value="News"></input>
-                <label htmlFor="checkbox_3">News Search</label>
+                <label htmlFor="checkbox_3">News</label>
               </div>
 
               <div className={classes.options}>
                 <input type="checkbox" ref="videoSearch" id="checkbox_4" name="qO_videoSearch" value="Video"></input>
-                <label htmlFor="checkbox_4">Video Search</label>
+                <label htmlFor="checkbox_4">Videos</label>
               </div>
 
               <div className={classes.options}>
                 <input type="checkbox" ref="pdfSearch" id="checkbox_5" name="qO_pdfSearch" value="PDF"></input>
-                <label htmlFor="checkbox_5">PDF Search</label>
+                <label htmlFor="checkbox_5">PDF files</label>
               </div>
           </div>
 
-          <input className={classes.inputBarAndSubmit} type="text" ref="searchParam" id="search" name="search_parameter" placeholder="Click to enter your Searchquerie"></input>
-          <input className={classes.sendQuery} onClick={this.sendInformation} type="button" value="Start Searchengine"></input>
+          <input className={classes.inputBarAndSubmit} type="text" ref="searchParam" id="search" name="search_parameter" placeholder="Enter your search Query"></input>
+          <input className={classes.sendQuery} onClick={this.sendInformation} type="button" value="Search"></input>
         </form>
 
       </div>

@@ -10,6 +10,9 @@ module.exports = {
     return new Promise((resolve, reject) => {
       console.log("DuckDuckGoApi Access to Data from Searchbar: " + req.body.query);
 
+
+
+
       //node-ddg NPM
       options = {
         "useragent" : "Homeboard Search",
@@ -18,6 +21,7 @@ module.exports = {
       }
 
       ddg.query(req.body.query, options, function(err, data) {
+
 
           if(err){
             return reject(err);
@@ -32,7 +36,9 @@ module.exports = {
           // }
           resolve(results);
 
+
       })
+
 
     });
   }
