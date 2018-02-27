@@ -31,6 +31,7 @@ app.get('/', function (req, res) {
 
 //A Search Request is made!
 app.post('/search', function(req, res) {
+  console.log(req.body);
 
 Promise.all([
             GoogleApi.GoogleCustomSearch(req),

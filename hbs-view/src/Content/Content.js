@@ -7,6 +7,7 @@ import classes from './CSS/Content.css';
 import Searchbar from './../Searchbar/Searchbar';
 import Time from './../Widgets/Time/Time';
 import Notes from './../Widgets/Notes/Notes';
+import Info from './../Widgets/Info/Info';
 
 class Content extends Component {
 
@@ -32,12 +33,30 @@ render(){
   if(this.state.id === "Dashboard"){
     console.log("Display Widgets");
     blocks.push(
-    <div className={classes.widgetContainer}>
+<div>
 
+  <div className={classes.widgetsContainer1}>
+
+    <div className={classes.widgetTime}>
       <Time />
-      <Notes />
-
     </div>
+
+    <div className={classes.widgetNotes}>
+      <Notes />
+    </div>
+
+  </div>
+
+  <div className={classes.widgetsContainer2}>
+
+    <div className={classes.Information}>
+      <Info />
+    </div>
+
+  </div>
+
+</div>
+
     );
   } else {
   //moz filter .filter
@@ -69,7 +88,7 @@ render(){
       }else if(this.state.id ==="Bing"){
         blocks.push(
           <div>
-            { item.url }
+            { item.name }
           </div>
         );
       }

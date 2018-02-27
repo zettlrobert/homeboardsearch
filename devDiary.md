@@ -215,3 +215,21 @@ Instant answers come from a variety of sources, including Wikipedia, Wikia, Crun
 using node-ddg from jawerty https://github.com/jawerty/node-ddg
 1. install npm ddg --s
 2.
+
+
+
+BING
+
+Need Cognitiv eService API Account with Bing Search APIs
+Create:
+https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account
+Need:
+Azure Subscription // Check if services Cost
+
+Create a Cognitive Services API account (API for Metasearch)
+AI Cognitive Service + Bing Search API
+https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account
+
+INSTALL node-bing-api
+node module
+https://www.npmjs.com/package/node-bing-api

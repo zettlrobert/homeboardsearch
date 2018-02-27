@@ -1,0 +1,11 @@
+.ulInfo {
+    /* border: 5px solid red; */
+    margin: 0;
+}
+
+.infoItem {
+  /* border: 2px solid blue; */
+  font-size: 2em;
+  margin: 1em;
+  font-style: italic;
+}

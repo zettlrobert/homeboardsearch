@@ -1,25 +1,95 @@
-.Notes {
+.NotesContainer {
+
+}
+
+.InputWrapper {
+  /* border: 1px solid rgb(128, 242, 255);; */
+  padding: 0.4em;
+  display: flex;
+  justify-content: center;
+}
+
+.InputField {
   box-sizing: border-box;
-  /* border: 5px solid green; */
+  /* border: 1px solid black; */
+  border: none;
+  width: 70%;
+  padding: 0.3em;
+  font-size: 1.5em;
+}
+
+.InputField::placeholder {
+  text-align: center;
+}
+
+.InputField:active{
+  box-sizing: border-box;
+  border: 2px solid rgb(128, 242, 255);
+}
+
+.InputField:focus {
+  outline: none;
+  border: none;
+  width: 70%;
+  padding: 0.3em;
+  font-size: 1.5em;
+}
+
+.AddButton {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  width: 30%;
+  padding: 0.3em;
+  font-size: 1.5em;
+  background: none;
+  color: rgb(128, 242, 255);
+}
+
+.AddButton:hover{
+  border: 1px solid transparent;
+  box-sizing: border-box;
   color: white;
+  background-color: rgb(128, 242, 255);
+}
+
+.listItem {
+  /* border: 2px solid red; */
+  font-size: 1.2em;
+  padding: 0.2em;
+  margin: 1em;
+}
+
+.listItem:hover{
+  background-color: rgba(223, 0, 0, 0.65);
+}
+
+.list {
+  list-style: none;
+  /* border: 2px solid green; */
   margin: 0;
-  padding: 1em;
-  font-family: Impact;
-  font-size: 3em;
-  width: 45vw;
+  padding: 0;
 }
-
-
-
-
-
-.myTest {
-  border: 3px solid red;
-
-}
-
 
 .task {
   padding: 1em;
   border: 2 px solid blue;
+}
+
+.DeleteWrapper {
+  /* border: 2px solid red; */
+  display: flex;
+  margin: 0;
+}
+
+.delInfoPlace {
+  /* border: 2px solid orange; */
+  width: 70%
+}
+
+.removeInfo {
+  width: 30%;
+  text-align: center;
+  color: rgba(223, 0, 0, 0.65);
+  padding: 0.3em;
+  font-size: 1.5;
 }

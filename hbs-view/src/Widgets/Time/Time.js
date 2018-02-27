@@ -39,7 +39,7 @@ updateDate() {
 render() {
 
   return (
-    <div className={WidgetClasses.widget}>
+    <div className={WidgetClasses.widgetTime}>
 
     <div className={classes.WatchContainer}>
       <h4 className={WidgetClasses.widgetDescriptionTime}>Date and Time</h4>

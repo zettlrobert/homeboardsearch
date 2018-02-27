@@ -1,5 +1,5 @@
 .searchWrapper {
-  border: 1px solid red;
+  /* border: 5px solid red; */
   box-sizing: border-box;
   text-align: center;
   padding: 1em;
@@ -8,13 +8,12 @@
 }
 
 .inputForm {
-  /* border: 0.2em solid #312e41; */
-  border: 1px solid rgba(49, 46, 65, 1);
+  /* border: 15px solid red; */
   box-sizing: border-box;
-  background-color: rgba(182, 182, 182, 1);
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 30px -5px rgba(191, 191, 191, 0.7);
   padding: 0;
   margin: 0;
-  box-shadow: 0px 5px 30px -5px rgba(191, 191, 191, 0.5);
 }
 
 .h3Form {
@@ -38,7 +37,7 @@
 }
 
 .sendQuery:hover{
-  background-color: #80f2ff;
+  background-color: rgb(128, 242, 255);
   color: white;
 }
 
@@ -54,9 +53,8 @@
 }
 
 .inputBarAndSubmit {
-  box-sizing: border-box;
+  border: 0.2em solid white;
   padding: 1em;
-  border: none;
   font-size: 1.5em;
   background-color: rgba(255, 255, 255, 1);
   background-image: url("./search.svg");
@@ -73,11 +71,6 @@
   background-color: white;
   border: 0.2em solid #00bcd4;
   background-image: none;
-}
-
-input[type="checkbox"] {
-  color: white;
-  align-self: center;
 }
 
 .options {

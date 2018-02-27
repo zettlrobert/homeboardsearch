@@ -36,28 +36,33 @@ class Searchbar extends Component {
           <div className={classes.checkOptions}>
 
               <div className={classes.options}>
-                <input type="checkbox" ref="webSearch" id="checkbox_1" name="qO_webSearch" value="Web Search"></input>
-                <label htmlFor="checkbox_1">Web</label>
+                <label htmlFor="checkbox_1">
+                  <input type="radio" ref="webSearch" id="checkbox_1" name="qO_Search" defaultChecked={true}></input>
+                  Web</label>
               </div>
 
               <div className={classes.options}>
-                <input type="checkbox" ref="imageSearch" id="checkbox_2" name="qO_imageSearch" value="Image"></input>
-                <label htmlFor="checkbox_2">Images</label>
+                <label htmlFor="checkbox_2">
+                  <input type="radio" ref="imageSearch" id="checkbox_2" name="qO_Search" value="Image"></input>
+                  Images</label>
               </div>
 
               <div className={classes.options}>
-                <input type="checkbox" ref="newsSearch" id="checkbox_3" name="qO_newsSearch" value="News"></input>
-                <label htmlFor="checkbox_3">News</label>
+                <label htmlFor="checkbox_3">
+                  <input type="radio" ref="newsSearch" id="checkbox_3" name="qO_Search" value="News"></input>
+                  News</label>
               </div>
 
               <div className={classes.options}>
-                <input type="checkbox" ref="videoSearch" id="checkbox_4" name="qO_videoSearch" value="Video"></input>
-                <label htmlFor="checkbox_4">Videos</label>
+                <label htmlFor="checkbox_4">
+                  <input type="radio" ref="videoSearch" id="checkbox_4" name="qO_Search" value="Video"></input>
+                  Videos</label>
               </div>
 
               <div className={classes.options}>
-                <input type="checkbox" ref="pdfSearch" id="checkbox_5" name="qO_pdfSearch" value="PDF"></input>
-                <label htmlFor="checkbox_5">PDF files</label>
+                <label htmlFor="checkbox_5">
+                  <input type="radio" ref="pdfSearch" id="checkbox_5" name="qO_Search" value="PDF"></input>
+                  PDF files</label>
               </div>
           </div>
 

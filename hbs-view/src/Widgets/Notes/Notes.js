@@ -8,15 +8,15 @@ const TodoForm = ({addTodo}) => {
   let input;
   // Return JSX
   return (
-    <div>
-      <input ref={node => {
+    <div className={classes.InputWrapper}>
+      <input className={classes.InputField} placeholder="Enter Your Note..." ref={node => {
         input = node;
       }} />
-      <button onClick={() => {
+    <button className={classes.AddButton} onClick={() => {
         addTodo(input.value);
         input.value = '';
       }}>
-        +
+       Add Note
       </button>
     </div>
   );
@@ -24,7 +24,7 @@ const TodoForm = ({addTodo}) => {
 
 const Todo = ({todo, remove}) => {
   // Each Todo
-  return (<li onClick={() =>
+  return (<li className={classes.listItem} onClick={() =>
       {remove(todo.id)}}>
       {todo.text}</li>);
 }
@@ -32,18 +32,16 @@ const Todo = ({todo, remove}) => {
 const TodoList = ({todos, remove}) => {
   // Map through the todos
   const todoNode = todos.map((todo) => {
-    return (<Todo className={classes.task} todo={todo} key={todo.id} remove={remove}/>)
+    return (<Todo todo={todo} key={todo.id} remove={remove}/>)
   });
-  return (<ul>{todoNode}</ul>);
+  return (<ul className={classes.list}>{todoNode}</ul>);
 }
 
 
 const Title = () => {
   return (
-    <div>
-       <div>
-          <h1>Notes</h1>
-       </div>
+    <div >
+      <h4 className={WidgetClasses.widgetDescriptionNotes}>Notes</h4>
     </div>
   );
 }
@@ -83,13 +81,20 @@ class Notes extends Component{
     render(){
       // Render JSX
       return (
-        <div>
-          <Title />
-          <TodoForm addTodo={this.addTodo.bind(this)}/>
-          <TodoList
-            todos={this.state.data}
-            remove={this.handleRemove.bind(this)}
-          />
+        <div className={WidgetClasses.widgetNote}>
+          <div className={classes.NotesContainer}>
+            <Title/>
+            <TodoForm addTodo={this.addTodo.bind(this)}/>
+            <TodoList
+              todos={this.state.data}
+              remove={this.handleRemove.bind(this)}
+              />
+            <div className={classes.DeleteWrapper}>
+              <div className={classes.delInfoPlace}></div>
+              <div className={classes.removeInfo}>Click To Remove</div>
+            </div>
+
+          </div>
         </div>
       );
     }

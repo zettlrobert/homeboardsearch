@@ -1,5 +1,5 @@
 .WatchContainer {
-  width: 25vw;
+
 }
 
 .Watch {
@@ -7,7 +7,8 @@
   box-sizing: border-box;
   color: black;
   margin: 0;
-  font-family: Impact;
+  /* font-family: Impact; */
+  font-weight: bold;
   margin: 0;
   padding: 1em;
 }
