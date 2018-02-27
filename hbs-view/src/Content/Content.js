@@ -88,7 +88,14 @@ render(){
       }else if(this.state.id ==="Bing"){
         blocks.push(
           <div>
-            { item.name }
+
+            <div className={classes.someContent}>
+              <h3 className={classes.itemHeading}>{item.name}</h3>
+                <div className={classes.linkWrap}>
+                  <a href={item.url} target="_blank" className={classes.linkStyle}>{item.url}></a>
+               </div>
+            </div>
+
           </div>
         );
       }

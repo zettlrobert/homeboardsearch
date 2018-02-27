@@ -12,7 +12,7 @@ return new Promise( (resolve, reject) => {
 
   axios.get('https://www.googleapis.com/customsearch/v1?',  {
     params : {
-      key : 'AIzaSyDWEWgfQ3f8auzXRq1WuM4X3JZvlzqg2uo',
+      key : 'AIzaSyDnXO_z6wT51ossOxBFP0w8hnLBwZuIFJs',
       cx : '018170918728530060604:nf7onga_kd8',
       q : req.body.query
   }
@@ -41,10 +41,9 @@ return new Promise( (resolve, reject) => {
   }
 
 
-//Search Engine 2
-//var cx = '018170918728530060604:jk-kpj9fy-q';
-    
 
+//Key_old : AIzaSyDWEWgfQ3f8auzXRq1WuM4X3JZvlzqg2uo
+//Key: AIzaSyDnXO_z6wT51ossOxBFP0w8hnLBwZuIFJs
 
 
 
