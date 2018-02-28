@@ -56,9 +56,9 @@ Promise.all([
     item.searchApi = "Bing";
     return item;
   });
-
+  
   // All Items
-  let allItems = googleRes.concat(ddgRes, bingRes);
+ let allItems = googleRes.concat(ddgRes, bingRes);
   console.log({allItems});
 
   res.send(allItems);

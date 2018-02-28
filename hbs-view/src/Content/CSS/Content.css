@@ -34,7 +34,7 @@
   background-color: rgba(182, 182, 182, 1);
   box-shadow: 0px 5px 30px -5px rgba(159, 159, 159, 1);
   width: 100%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   padding: 0;
   margin: 2em;
 }
@@ -48,13 +48,14 @@
 }
 
 .linkWrap {
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   padding: 1em;
 }
 
 .linkStyle {
   box-sizing: content-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  font-weight: bold;
   padding: 1em;
   margin: 0;
 }
@@ -97,4 +98,22 @@
   /* border: 2px solid blue; */
   margin: 1em;
   width: 100vw;
+}
+
+
+/*Google Images*/
+
+.googleImageWrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: right;
+  align-items: center;
+}
+
+.googleImageRes {
+  border-radius: 0;
+  margin: 0.2em;
+  height: 200%;
+  width: 200%;
 }

@@ -13,7 +13,7 @@ class Content extends Component {
 
 state = {
   id: "Dashboard",
-  items: []
+  items: [],
 };
 
 updateContent = (items) => {
@@ -25,7 +25,6 @@ contentChange = (id) => {
 }
 
 render(){
-
 
   let blocks = [];
 
@@ -56,8 +55,8 @@ render(){
   </div>
 
 </div>
-
     );
+
   } else {
   //moz filter .filter
     this.state.items.filter( (item) => {
@@ -67,15 +66,38 @@ render(){
         console.log("Dashboard >>>>>>>>>>>>>>>>>>>>>>>");
       }else if(this.state.id ==="Google"){
         console.log("Google API returning in Content Logging ITEMS");
-        blocks.push(
-        <div className={classes.someContent}>
-          <h3 className={classes.itemHeading}>{item.title}</h3>
-            <div className={classes.linkWrap}>
-              <a href={item.link} target="_blank" className={classes.linkStyle}>{item.link}></a>
-           </div>
-        </div>
-        );
+
+        if(this.state.items && this.state.items[0].image){
+          blocks.push(
+            <div className={classes.someContentImg}>
+              <div className={classes.googleImageWrap}>
+                <h3 className={classes.itemHeading}>
+                  <a href={item.image.contextLink} target="_blank">Open Image</a>
+                </h3>
+                <div>
+                  <img  className={classes.googleImageRes} src={ item.image.thumbnailLink } />
+                </div>
+              </div>
+            </div>
+          )
+        } else {
+          blocks.push(
+
+            <div className={classes.someContent}>
+              <h3 className={classes.itemHeading}>{item.title}</h3>
+              <div className={classes.linkWrap}>
+                <a href={item.link} target="_blank" className={classes.linkStyle}>{item.link}></a>
+
+              </div>
+            </div>
+          );
+        }
+
+
+
+
       }else if(this.state.id ==="DuckDuckGo"){
+
         console.log("DDG API returning in Content Logging ITEMS");
         blocks.push(
           <div className={classes.someContent}>
@@ -85,7 +107,9 @@ render(){
               </div>
           </div>
         );
+
       }else if(this.state.id ==="Bing"){
+
         blocks.push(
           <div>
 
@@ -98,6 +122,7 @@ render(){
 
           </div>
         );
+
       }
     });
 
