@@ -1,38 +1,30 @@
-Clone Repository
-git clone
-https://www.npmjs.com/package/express
+# Homeboard Search
 
-hbs-view
-create-react-app
+## Metasearchengine using React and Node
 
-rootserver
-express https://www.npmjs.com/package/express //routing
-  mkdir rootserver
-  npm init ->package.json
-  entry point -> def index.js
-  npm install express --save
+![Homeboardsearch](./hbs.png)
+![Homeboardsearch](./hbs1.png)
+![Homeboardsearch](./hbs2.png)
+![Homeboardsearch](./hbs3.png)
+![Homeboardsearch](./hbs4.png)
 
-firebase-admin https://www.npmjs.com/package/firebase-admin
-  npm install --save firebase-admin
-  to use require in your application from any js file:
-  var admin = require("firebase-admin");
+Metasearch engine Reactjs Frontend, Nodejs Backend. A custom Searchquery was sent to Google, Bing and DuckDuckGo API.Results are Displayed in the Dashboard.
 
-firebase https://www.npmjs.com/package/firebase
-npm install --save firebase
-for Authentification and firebase Functions
-var app = firebaes.initializeApp();
+## Structure
 
-unlock CSS Modules for react https://github.com/css-modules/css-modules
-  npm run eject on hbs-view
-  scroll du modules
-  find test: /\.css$/,
-  in options set:
-    modules: true
-  add
-    localIdentName: '[name]__[local]__[hash:base64:5]'
-  go to webpack.config.prod
-  search for css loader
-  add	                  
-    importLoaders: 1,
-    modules: true,
-    localIdentName: '[name]__[local]__[hash:base64:5]',
+### server
+
+1. Technologies
+
+- nodejs
+- express
+- /api/DuckDuckGo
+- /api/googlesearch
+- /api/bing
+
+### client
+
+- react
+
+Readme:
+updated 2020
