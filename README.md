@@ -1,6 +1,8 @@
-# **Deprecated! I don't support or update this Applcation**
+# **Deprecated! I don't support or update this Application**
 
 ## Homeboard Search
+
+![cover](docs/cover.png)
 
 ### Metasearchengine using React and Node
 
